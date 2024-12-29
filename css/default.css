@@ -115,7 +115,7 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
+blockquote, q { quotes: "“" "”"; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -172,7 +172,7 @@ body {
    font-weight: normal;
    font-size: 15px;
    line-height: 30px;
-	color: #838C95;
+	color: #000000;
 
    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
@@ -196,7 +196,7 @@ h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
 
-p { margin: 0 0 30px 0; }
+p { margin: 0 0 0px 0; }
 p img { margin: 0; }
 p.lead {
    font: 19px/36px 'opensans-light', sans-serif;
@@ -341,6 +341,49 @@ ol ol li, ol ul li { margin-bottom: 6px; }
 li { line-height: 18px; margin-bottom: 12px; }
 ul.large li { }
 li p { }
+
+.values-list {
+   list-style: none;  /* Removes the bullet points */
+   padding: 0;
+}
+
+.values-list li {
+   font-size: 18px;
+   margin: 10px 0;
+   padding: 5px;
+   border-bottom: 1px solid #ddd; /* Optional: Adds a line between the values */
+}
+
+.values-section {
+   background-color: #c8c3c3ad; /* Light grey background */
+   padding: 20px; /* Adds spacing inside the section */
+   border-radius: 10px; /* Makes the corners rounded */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Value Items Styling */
+.value-item {
+   margin-bottom: 20px; /* Space between each value */
+}
+
+/* Heading Styling */
+.value-item h2 {
+   font-size: 24px; /* Makes the text larger */
+   color: #000000; /* Darker text color for contrast */
+   margin-bottom: 5px; /* Space below the heading */
+}
+/* Paragraph Styling */
+.value-item p {
+   font-size: 18px; /* Makes the description text larger */
+   color: #373737; /* Slightly lighter text for balance */
+   margin: 0; /* Removes default paragraph margins */
+}
+
+/* Optional: Add borders to separate values visually */
+.value-item:not(:last-child) {
+   border-bottom: 10px solid #000000;
+   padding-bottom: 15px; /* Adds space above the border */
+}
 
 /* ---------------------------------------------------------------------
 /*  Stats Tab Markup
@@ -813,7 +856,7 @@ properly.
 
 .remove-bottom { margin-bottom: 0 !important; }
 .half-bottom { margin-bottom: 12px !important; }
-.add-bottom { margin-bottom: 24px !important; }
+.add-bottom { margin-bottom: 0px !important; }
 .no-border { border: none; }
 
 .text-center  { text-align: center !important; }

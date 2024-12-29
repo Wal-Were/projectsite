@@ -176,7 +176,7 @@ ul#nav li.current a { color: #fff; }
 
 	#hero { 
 		background: #23292f url(img/hero-bg_@2X.png); 
-		background-size: 200px 200px;
+		background-size: 1000px 1000px;
 	}
   
 }
@@ -209,12 +209,18 @@ ul#nav li.current a { color: #fff; }
 /* Hero Image */
 .hero-image {
    width: 100%;
-   margin: 0 auto;
+   height: 10%; 
+   display: flex; /* Enables flexbox */
+   justify-content: center; /* Centers horizontally */
+   align-items: flex-end; /* Aligns to the bottom */
+   margin: 0; /* Removes extra margin */
 }
 .hero-image img {
-   vertical-align: bottom;
+   width: 45%;
+   height: 45%; 
    display: block;
 }
+
 
 /* Hero CTA Buttons */
 #hero .buttons {
@@ -636,7 +642,7 @@ ul.features li:nth-child(even) { }
    margin: 0 6px;
    display: inline-block;
    zoom: 1;
-   *display: inline;
+   display: inline;
 }
 .flex-control-paging li a {
    width: 12px;
