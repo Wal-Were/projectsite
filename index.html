@@ -1,174 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>W.R.A.L. Portfolio</title>
+  <meta charset="utf-8" />
+  <title>W.R.A.L. : About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/media-queries.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/prettyPhoto.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <script src="js/modernizr.js"></script>
+  <link rel="shortcut icon" href="favicon.png" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
-    }
-    header {
-      background: #0a0524;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-    }
-    nav button {
-      background: none;
-      border: none;
-      color: white;
-      padding: 14px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    nav button:hover {
-      background: #444;
-    }
-    .tab-content {
-      display: none;
-      padding: 20px;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
     .colored-link {
       background-color: #0a0524;
       color: white;
-      padding: 14px;
-      font-size: 20px;
+      padding: 14px 25px;
       text-align: center;
+      font-size: 30px;
     }
-    .colored-link a {
-      color: aqua;
-      text-decoration: underline;
+    .responsive-headline {
+      font-size: clamp(32px, 8vw, 64px);
+      font-weight: bold;
+      color: white;
     }
-    img.profile {
-      float: left;
-      margin: 1px 30px 10px 1px;
-      border: 5px solid #000;
-      padding: 1px;
-      width: 180px;
-      height: 210px;
+    .sub-headline {
+      color: #ccc;
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    .tagline {
+      color: #aaa;
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 5px;
+    }
+    .tab {
+      display: inline-block;
+      background-color: #0a0524;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .tab:hover {
+      background-color: #1a1444;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-active {
+      display: block;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Wayne Rold Allen N. Llamado</h1>
-    <p>Computer Engineering Student • Game Developer • Writer</p>
-    <p style="font-style: italic; color: #ccc">"AI is a foreign language. I am the translator."</p>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+    <nav id="nav-wrap">
+      <div class="tab" onclick="showTab('about')">About</div>
+      <div class="tab" onclick="showTab('projects')">Projects</div>
+      <div class="tab" onclick="showTab('contact')">Contact</div>
+    </nav>
+    <ul class="header-social">
+      <li><a href="https://www.facebook.com/waynerold.llamado/"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.youtube.com/@Wal_Were"><i class="fab fa-youtube-square"></i></a></li>
+      <li><a href="https://www.twitch.tv/wal_were_gaming?no-reload=true"><i class="fab fa-twitch"></i></a></li>
+    </ul>
   </header>
-  <nav>
-    <button onclick="showTab('about')">About</button>
-    <button onclick="showTab('skills')">Skills</button>
-    <button onclick="showTab('education')">Education</button>
-    <button onclick="showTab('projects')">Projects</button>
-    <button onclick="showTab('contact')">Contact</button>
-  </nav>
 
-  <div id="about" class="tab-content active">
-    <section class="section">
-      <img src="images/DSC02738.jpg" alt="Profile" class="profile" />
-      <p>Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#contact">here</a>.</p>
-      <p>Please take your time as you scroll through my webpage.</p>
-      <p>Language & Platform:</p>
-      <ul>
-        <li>C</li>
-        <li>C++</li>
-        <li>Java</li>
-        <li>Unreal Engine</li>
-      </ul>
-    </section>
-  </div>
-
-  <div id="skills" class="tab-content">
-    <section class="section">
-      <h3>Skills</h3>
-      <ul>
-        <li>Verbal and Written Communications</li>
-        <li>Team Management</li>
-        <li>Problem Solving</li>
-        <li>Decision-Making</li>
-        <li>Attention to Detail</li>
-        <li>Tech Savvy</li>
-        <li>Strong Work Ethic</li>
-      </ul>
-      <h3>Values</h3>
-      <ul>
-        <li><b>Integrity:</b> Upholding strong moral principles</li>
-        <li><b>Loyalty:</b> Commitment and trustworthiness</li>
-        <li><b>Professionalism:</b> Maintaining standards of excellence</li>
-        <li><b>Adaptability:</b> Being flexible and open to change</li>
-        <li><b>Resourcefulness:</b> Making the most of available resources</li>
-      </ul>
-    </section>
-  </div>
-
-  <div id="education" class="tab-content">
-    <section class="section">
-      <h3>Education</h3>
-      <ul>
-        <li>Philippine School Doha (2007 - 2020)</li>
-        <li>Indang National Senior High School (2020 - 2022)</li>
-        <li>University of Bohol (2022 - Present)</li>
-      </ul>
-      <h3>Achievements</h3>
-      <ul>
-        <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
-        <li>Graduated with honors (2021 - 2022)</li>
-        <li>Qatar Debate Team Representative (2019 - 2020)</li>
-        <li>Science Olympic Champion (2018 - 2019)</li>
-        <li>Finalist in Highschool Debate (2018 - 2019)</li>
-        <li>Shortlisted in Qatar's Young Writer Program (2019 - 2020)</li>
-        <li>3rd Place in UB Days 2023 Gladiator</li>
-      </ul>
-    </section>
-  </div>
-
-  <div id="projects" class="tab-content">
-    <section class="section">
-      <div class="colored-link">
-        Want to go to <a href="https://spleste.pages.dev/">"The Simple Website"</a>?<br />
-        Want to see some of my <a href="https://conctlectst.pages.dev/">"Works"</a>?
+  <section id="hero">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="hero-text">
+          <h1 class="responsive-headline">Wayne Rold Allen N. Llamado</h1>
+          <p class="sub-headline">Computer Engineering Student • Game Developer • Writer</p>
+          <p class="tagline">Blending logic with creativity to build tech and tell stories.</p>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-image.png" alt="Hero Image" />
+        </div>
       </div>
-      <p>
-        In my spare time, I dabble in game design and narrative development. Currently working on a narrative-driven game using Unreal Engine about those who have passed—exploring their regrets, joy, and sorrow.
-      </p>
-    </section>
-  </div>
+    </div>
+  </section>
 
-  <div id="contact" class="tab-content">
-    <section class="section">
-      <p>21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
-      <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
-      <p>
-        Hobbies include <a href="https://www.wattpad.com/user/Walf_Albot">writing</a>, <a href="https://www.youtube.com/@Wal_Were">video making</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true">streaming</a>.
-      </p>
-      <p>Mostly, I am busy with college and maintaining passing grades.</p>
-    </section>
-  </div>
+  <section id="main-content" style="padding: 90px 0 72px; background: #fff;">
+    <div id="about" class="tab-content tab-active">
+      <div class="row section-head">
+        <h1>Motto</h1>
+        <p class="lead add-bottom">"AI is a foreign language. I am the translator"</p>
+      </div>
 
-  <footer style="text-align:center; padding:20px; background:#222; color:white">
-    <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
+      <div class="row add-bottom">
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          <img
+            width="180"
+            height="210"
+            class="pull-left"
+            src="images/DSC02738.jpg"
+            alt="Profile"
+            style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;"
+          />
+          Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#call">here</a>.<br /><br />
+          Please take your time as you scroll through my home page. Let me list computer languages that I am proficient in:
+        </p>
+        <p id="right">
+          &gt; C<br />
+          &gt; C++<br />
+          &gt; Java
+        </p>
+        <p>Maybe not the most proficient, but a wise person never stops learning...</p>
+        <hr />
+      </div>
+
+      <div class="colored-link">
+        Want to go to <a href="https://spleste.pages.dev/" style="color: aqua;">"The Simple Website"</a>?<br /><br />
+        Want to see some of my <a href="https://conctlectst.pages.dev/" style="color: aqua;">"Works"</a>?
+      </div>
+
+      <div class="row add-bottom">
+        <div class="eight columns add-bottom">
+          <h3 class="add-bottom">Detailed Information</h3>
+          <h5>a) Education</h5>
+          <dl>
+            <dt><b>Schools</b></dt>
+            <ul class="disc">
+              <li>Philippine School Doha (2007 - 2020)</li>
+              <li>Indang National Senior High School (2020 - 2022)</li>
+              <li>University of Bohol (2022 - present)</li>
+            </ul>
+
+            <dt><b>Achievement</b></dt>
+            <ul class="disc">
+              <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
+              <li>Graduated with honors (2021 - 2022)</li>
+              <li>Representative in Qatar Debate Team (2019 - 2020)</li>
+              <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
+              <li>Finalist in Highschool Debate (2018 - 2019)</li>
+              <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
+              <li>3rd place in UB Days 2023 Gladiator</li>
+            </ul>
+          </dl>
+
+          <h5>b) Skills</h5>
+          <ul class="disc">
+            <li>Proficient in Verbal and Written Communications</li>
+            <li>Team Management</li>
+            <li>Problem Solving</li>
+            <li>Decision-Making</li>
+            <li>Attention to Detail</li>
+            <li>Tech Savvy</li>
+            <li>Strong Work Ethic</li>
+          </ul>
+        </div>
+
+        <div class="four columns add-bottom values-section">
+          <h1>Values:</h1>
+          <div class="value-item"><h2>Integrity</h2><p>Upholding strong moral principles</p></div>
+          <div class="value-item"><h2>Loyalty</h2><p>Commitment and trustworthiness</p></div>
+          <div class="value-item"><h2>Professionalism</h2><p>Maintaining standards of excellence</p></div>
+          <div class="value-item"><h2>Adaptability</h2><p>Being flexible and open to change</p></div>
+          <div class="value-item"><h2>Resourceful</h2><p>Making the most of available resources</p></div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="row add-bottom">
+        <div class="four columns">
+          <p id="call">21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
+          <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
+        </div>
+        <div>
+          <img
+            width="250"
+            height="250"
+            class="pull-left"
+            src="images/Wal_Were New Logo.png"
+            alt="Logo"
+            style="border: 10px solid #051685;"
+          />
+        </div>
+        <div class="four columns">
+          <p>
+            As time passes, I have indulged in hobbies like <a href="https://www.wattpad.com/user/Walf_Albot">writing</a>, <a href="https://www.youtube.com/@Wal_Were">video making</a>, <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true">streaming</a>, and more.
+          </p>
+          <p>Mostly, I am busy with college and maintaining passing grades.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <p>
+            "In my spare time, I dabble in game design and narrative development. Currently working on a narrative-driven game using Unreal Engine about those who have passed—exploring their regrets, joy, and sorrow. It’s not award-winning yet, but you have to start somewhere..."
+          </p>
+        </div>
+        <div class="six columns">
+          <p>
+            While still in college, this website serves as my portfolio for interested parties. If interested, let me know.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="tab-content">
+      <div class="row section-head">
+        <h1>Projects</h1>
+        <p>Coming soon... or poke me to update it faster.</p>
+      </div>
+    </div>
+
+    <div id="contact" class="tab-content">
+      <div class="row section-head">
+        <h1>Contact</h1>
+        <p>Reach out to me on social media links above, or wait until I feel like checking emails again.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div class="six columns info">
+        <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
+      </div>
+      <div class="six columns right-cols"></div>
+    </div>
   </footer>
 
   <script>
-    function showTab(tabId) {
+    function showTab(id) {
       const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
+      tabs.forEach(t => t.classList.remove('tab-active'));
+      document.getElementById(id).classList.add('tab-active');
     }
   </script>
 </body>
