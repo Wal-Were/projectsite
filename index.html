@@ -1,221 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>W.R.A.L. : About Me</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/default.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/media-queries.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/prettyPhoto.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <script src="js/modernizr.js"></script>
-  <link rel="shortcut icon" href="favicon.png" />
-  <style>
-    .colored-link {
-      background-color: #0a0524;
-      color: white;
-      padding: 14px 25px;
-      text-align: center;
-      font-size: 30px;
-    }
-    .responsive-headline {
-      font-size: clamp(32px, 8vw, 64px);
-      font-weight: bold;
-      color: white;
-    }
-    .sub-headline {
-      color: #ccc;
-      font-size: 24px;
-      margin-top: 10px;
-    }
-    .tagline {
-      color: #aaa;
-      font-size: 18px;
-      font-style: italic;
-      margin-top: 5px;
-      
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayne Llamado - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
-    </div>
-    <nav id="nav-wrap"></nav>
-    <ul class="header-social">
-      <li><a href="https://www.facebook.com/waynerold.llamado/"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="https://www.youtube.com/@Wal_Were"><i class="fab fa-youtube-square"></i></a></li>
-      <li><a href="https://www.twitch.tv/wal_were_gaming?no-reload=true"><i class="fab fa-twitch"></i></a></li>
-    </ul>
-  </header>
+<body class="bg-gray-900 text-white font-sans">
 
-  <section id="hero">
-    <div class="row">
-      <div class="twelve columns">
-        <div class="hero-text">
-          <h1 class="responsive-headline">Wayne Rold Allen N. Llamado</h1>
-            <p class="sub-headline">Computer Engineering Student • Game Developer • Writer</p>
-            <p class="tagline">Blending logic with creativity to build tech and tell stories.</p>
-        </div>
-        <div class="hero-image">
-          <img src="images/hero-image.png" alt="Hero Image" />
-        </div>
-      </div>
+  <!-- Navbar -->
+  <nav class="bg-gray-800 fixed top-0 w-full z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-2xl font-bold">W.R.A.L.</div>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-24 text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-extrabold">Wayne Rold Allen N. Llamado</h1>
+    <p class="text-xl mt-2">Computer Engineering Student • Game Developer • Writer</p>
+    <p class="italic text-gray-400 mt-1">Blending logic with creativity to build tech and tell stories.</p>
+    <img src="images/hero-image.png" alt="Hero" class="mx-auto mt-6 rounded-lg w-52 h-auto" />
+  </section>
+
+  <!-- Tabs -->
+  <section class="max-w-4xl mx-auto mt-16 px-4" id="about">
+    <div class="flex space-x-4 justify-center border-b border-gray-600 pb-2">
+      <button class="tab-btn text-lg font-semibold text-cyan-400" data-tab="about">About</button>
+      <button class="tab-btn text-lg font-semibold" data-tab="projects">Projects</button>
+      <button class="tab-btn text-lg font-semibold" data-tab="skills">Skills</button>
+      <button class="tab-btn text-lg font-semibold" data-tab="contact">Contact</button>
+    </div>
+
+    <div class="tab-content mt-6" id="tab-about">
+      <p class="mb-4">Hello, welcome to my site. I'm Wayne — a 3rd year Computer Engineering student with a passion for writing, storytelling, and game development.</p>
+      <img src="images/DSC02738.jpg" class="w-48 float-left mr-6 mb-4 border-4 border-white" alt="Profile Photo">
+      <p>I'm currently building a narrative-driven game using Unreal Engine about souls and their regrets. When not coding or writing, I enjoy making videos, debating, and overthinking life's design specs.</p>
+    </div>
+
+    <div class="tab-content hidden mt-6" id="tab-projects">
+      <ul class="list-disc list-inside">
+        <li><a href="https://spleste.pages.dev/" class="text-cyan-400">The Simple Website</a></li>
+        <li><a href="https://conctlectst.pages.dev/" class="text-cyan-400">My Works</a></li>
+        <li>Unreal Engine Game – “The Walk”</li>
+      </ul>
+    </div>
+
+    <div class="tab-content hidden mt-6" id="tab-skills">
+      <p><strong>Languages & Platforms:</strong></p>
+      <ul class="list-disc list-inside">
+        <li>C</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Unreal Engine</li>
+      </ul>
+    </div>
+
+    <div class="tab-content hidden mt-6" id="tab-contact">
+      <p>Reach out:</p>
+      <ul class="list-inside list-disc">
+        <li><a href="https://facebook.com/waynerold.llamado/" class="text-cyan-400">Facebook</a></li>
+        <li><a href="https://youtube.com/@Wal_Were" class="text-cyan-400">YouTube</a></li>
+        <li><a href="https://twitch.tv/wal_were_gaming" class="text-cyan-400">Twitch</a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="styles" style="padding: 90px 0 72px; background: #fff;">
-    <div class="row section-head">
-      <h1>Motto</h1>
-      <p class="lead add-bottom">"AI is a foreign language. I am the translator"</p>
-    </div>
-
-    <div class="row add-bottom">
-      <hr />
-      <h3>Introduction</h3>
-     <div style="overflow: hidden;">
-  <img
-    width="180"
-    height="210"
-    class="pull-left"
-    src="images/DSC02738.jpg"
-    alt="Profile"
-    style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;"
-  />
-  <p>
-    Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#call">here</a>.
-  </p>
-  <p>
-    Please take your time as you scroll through my webpage.
-  </p>
-</div>
-
-<h4>Languages & Platforms</h4>
-<ul>
-  <li>C</li>
-  <li>C++</li>
-  <li>Java</li>
-  <li>Unreal Engine</li>
-</ul>
-
-   
-      <hr />
-    </div>
-
-    <div class="colored-link">
-      Want to go to <a href="https://spleste.pages.dev/" style="color: aqua;">"The Simple Website"</a>?<br /><br />
-      Want to see some of my <a href="https://conctlectst.pages.dev/" style="color: aqua;">"Works"</a>?
-    </div>
-
-    <div class="row add-bottom">
-      <div class="eight columns add-bottom">
-        <h3 class="add-bottom">Detailed Information</h3>
-        <h5>a) Education</h5>
-        <dl>
-          <dt><b>Schools</b></dt>
-          <ul class="disc">
-            <li>Philippine School Doha (2007 - 2020)</li>
-            <li>Indang National Senior High School (2020 - 2022)</li>
-            <li>University of Bohol (2022 - present)</li>
-          </ul>
-
-          <dt><b>Achievement</b></dt>
-          <ul class="disc">
-            <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
-            <li>Graduated with honors (2021 - 2022)</li>
-            <li>Representative in Qatar Debate Team (2019 - 2020)</li>
-            <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
-            <li>Finalist in Highschool Debate (2018 - 2019)</li>
-            <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
-            <li>3rd place in UB Days 2023 Gladiator</li>
-          </ul>
-        </dl>
-
-        <h5>b) Skills</h5>
-        <ul class="disc">
-          <li>Proficient in Verbal and Written Communications</li>
-          <li>Team Management</li>
-          <li>Problem Solving</li>
-          <li>Decision-Making</li>
-          <li>Attention to Detail</li>
-          <li>Tech Savvy</li>
-          <li>Strong Work Ethic</li>
-        </ul>
-      </div>
-
-      <div class="four columns add-bottom values-section">
-        <h1>Values:</h1>
-        <div class="value-item">
-          <h2>Integrity</h2>
-          <p>Upholding strong moral principles</p>
-        </div>
-        <div class="value-item">
-          <h2>Loyalty</h2>
-          <p>Commitment and trustworthiness</p>
-        </div>
-        <div class="value-item">
-          <h2>Professionalism</h2>
-          <p>Maintaining standards of excellence</p>
-        </div>
-        <div class="value-item">
-          <h2>Adaptability</h2>
-          <p>Being flexible and open to change</p>
-        </div>
-        <div class="value-item">
-          <h2>Resourceful</h2>
-          <p>Making the most of available resources</p>
-        </div>
-      </div>
-      <hr />
-    </div>
-
-    <div class="row add-bottom">
-      <div class="four columns">
-        <p id="call">21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
-        <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
-      </div>
-      <div>
-        <img
-          width="250"
-          height="250"
-          class="pull-left"
-          src="images/Wal_Were New Logo.png"
-          alt="Logo"
-          style="border: 10px solid #051685;"
-        />
-      </div>
-      <div class="four columns">
-        <p>
-          As time passes, I have indulged in hobbies like <a href="https://www.wattpad.com/user/Walf_Albot">writing</a>, <a href="https://www.youtube.com/@Wal_Were">video making</a>, <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true">streaming</a>, and more.
-        </p>
-        <p>Mostly, I am busy with college and maintaining passing grades.</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="six columns">
-        <p>
-          "In my spare time, I dabble in game design and narrative development. Currently working on a narrative-driven game using Unreal Engine about those who have passed—exploring their regrets, joy, and sorrow. It’s not award-winning yet, but you have to start somewhere..."
-        </p>
-      </div>
-      <div class="six columns">
-        <p>
-          While still in college, this website serves as my portfolio for interested parties. If interested, let me know.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="row">
-      <div class="six columns info">
-        <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
-      </div>
-      <div class="six columns right-cols"></div>
-    </div>
+  <footer class="mt-24 py-6 bg-gray-800 text-center text-sm text-gray-400">
+    Built with care, sarcasm, and several cups of caffeine.
   </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('text-cyan-400'));
+        contents.forEach(c => c.classList.add('hidden'));
+        tab.classList.add('text-cyan-400');
+        document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
