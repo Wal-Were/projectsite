@@ -3,92 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wayne Llamado - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>W.R.A.L. Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    header {
+      background: #0a0524;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #444;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .colored-link {
+      background-color: #0a0524;
+      color: white;
+      padding: 14px;
+      font-size: 20px;
+      text-align: center;
+    }
+    .colored-link a {
+      color: aqua;
+      text-decoration: underline;
+    }
+    img.profile {
+      float: left;
+      margin: 1px 30px 10px 1px;
+      border: 5px solid #000;
+      padding: 1px;
+      width: 180px;
+      height: 210px;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-
-  <!-- Navbar -->
-  <nav class="bg-gray-800 fixed top-0 w-full z-50 shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-2xl font-bold">W.R.A.L.</div>
-      <ul class="hidden md:flex space-x-6 text-lg">
-        <li><a href="#about" class="hover:text-cyan-400">About</a></li>
-        <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
-        <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
-        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
-      </ul>
-    </div>
+<body>
+  <header>
+    <h1>Wayne Rold Allen N. Llamado</h1>
+    <p>Computer Engineering Student • Game Developer • Writer</p>
+    <p style="font-style: italic; color: #ccc">"AI is a foreign language. I am the translator."</p>
+  </header>
+  <nav>
+    <button onclick="showTab('about')">About</button>
+    <button onclick="showTab('skills')">Skills</button>
+    <button onclick="showTab('education')">Education</button>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('contact')">Contact</button>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="pt-24 text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-extrabold">Wayne Rold Allen N. Llamado</h1>
-    <p class="text-xl mt-2">Computer Engineering Student • Game Developer • Writer</p>
-    <p class="italic text-gray-400 mt-1">Blending logic with creativity to build tech and tell stories.</p>
-    <img src="images/hero-image.png" alt="Hero" class="mx-auto mt-6 rounded-lg w-52 h-auto" />
-  </section>
-
-  <!-- Tabs -->
-  <section class="max-w-4xl mx-auto mt-16 px-4" id="about">
-    <div class="flex space-x-4 justify-center border-b border-gray-600 pb-2">
-      <button class="tab-btn text-lg font-semibold text-cyan-400" data-tab="about">About</button>
-      <button class="tab-btn text-lg font-semibold" data-tab="projects">Projects</button>
-      <button class="tab-btn text-lg font-semibold" data-tab="skills">Skills</button>
-      <button class="tab-btn text-lg font-semibold" data-tab="contact">Contact</button>
-    </div>
-
-    <div class="tab-content mt-6" id="tab-about">
-      <p class="mb-4">Hello, welcome to my site. I'm Wayne — a 3rd year Computer Engineering student with a passion for writing, storytelling, and game development.</p>
-      <img src="images/DSC02738.jpg" class="w-48 float-left mr-6 mb-4 border-4 border-white" alt="Profile Photo">
-      <p>I'm currently building a narrative-driven game using Unreal Engine about souls and their regrets. When not coding or writing, I enjoy making videos, debating, and overthinking life's design specs.</p>
-    </div>
-
-    <div class="tab-content hidden mt-6" id="tab-projects">
-      <ul class="list-disc list-inside">
-        <li><a href="https://spleste.pages.dev/" class="text-cyan-400">The Simple Website</a></li>
-        <li><a href="https://conctlectst.pages.dev/" class="text-cyan-400">My Works</a></li>
-        <li>Unreal Engine Game – “The Walk”</li>
-      </ul>
-    </div>
-
-    <div class="tab-content hidden mt-6" id="tab-skills">
-      <p><strong>Languages & Platforms:</strong></p>
-      <ul class="list-disc list-inside">
+  <div id="about" class="tab-content active">
+    <section class="section">
+      <img src="images/DSC02738.jpg" alt="Profile" class="profile" />
+      <p>Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#contact">here</a>.</p>
+      <p>Please take your time as you scroll through my webpage.</p>
+      <p>Language & Platform:</p>
+      <ul>
         <li>C</li>
         <li>C++</li>
         <li>Java</li>
         <li>Unreal Engine</li>
       </ul>
-    </div>
+    </section>
+  </div>
 
-    <div class="tab-content hidden mt-6" id="tab-contact">
-      <p>Reach out:</p>
-      <ul class="list-inside list-disc">
-        <li><a href="https://facebook.com/waynerold.llamado/" class="text-cyan-400">Facebook</a></li>
-        <li><a href="https://youtube.com/@Wal_Were" class="text-cyan-400">YouTube</a></li>
-        <li><a href="https://twitch.tv/wal_were_gaming" class="text-cyan-400">Twitch</a></li>
+  <div id="skills" class="tab-content">
+    <section class="section">
+      <h3>Skills</h3>
+      <ul>
+        <li>Verbal and Written Communications</li>
+        <li>Team Management</li>
+        <li>Problem Solving</li>
+        <li>Decision-Making</li>
+        <li>Attention to Detail</li>
+        <li>Tech Savvy</li>
+        <li>Strong Work Ethic</li>
       </ul>
-    </div>
-  </section>
+      <h3>Values</h3>
+      <ul>
+        <li><b>Integrity:</b> Upholding strong moral principles</li>
+        <li><b>Loyalty:</b> Commitment and trustworthiness</li>
+        <li><b>Professionalism:</b> Maintaining standards of excellence</li>
+        <li><b>Adaptability:</b> Being flexible and open to change</li>
+        <li><b>Resourcefulness:</b> Making the most of available resources</li>
+      </ul>
+    </section>
+  </div>
 
-  <footer class="mt-24 py-6 bg-gray-800 text-center text-sm text-gray-400">
-    Built with care, sarcasm, and several cups of caffeine.
+  <div id="education" class="tab-content">
+    <section class="section">
+      <h3>Education</h3>
+      <ul>
+        <li>Philippine School Doha (2007 - 2020)</li>
+        <li>Indang National Senior High School (2020 - 2022)</li>
+        <li>University of Bohol (2022 - Present)</li>
+      </ul>
+      <h3>Achievements</h3>
+      <ul>
+        <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
+        <li>Graduated with honors (2021 - 2022)</li>
+        <li>Qatar Debate Team Representative (2019 - 2020)</li>
+        <li>Science Olympic Champion (2018 - 2019)</li>
+        <li>Finalist in Highschool Debate (2018 - 2019)</li>
+        <li>Shortlisted in Qatar's Young Writer Program (2019 - 2020)</li>
+        <li>3rd Place in UB Days 2023 Gladiator</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="projects" class="tab-content">
+    <section class="section">
+      <div class="colored-link">
+        Want to go to <a href="https://spleste.pages.dev/">"The Simple Website"</a>?<br />
+        Want to see some of my <a href="https://conctlectst.pages.dev/">"Works"</a>?
+      </div>
+      <p>
+        In my spare time, I dabble in game design and narrative development. Currently working on a narrative-driven game using Unreal Engine about those who have passed—exploring their regrets, joy, and sorrow.
+      </p>
+    </section>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <section class="section">
+      <p>21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
+      <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
+      <p>
+        Hobbies include <a href="https://www.wattpad.com/user/Walf_Albot">writing</a>, <a href="https://www.youtube.com/@Wal_Were">video making</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true">streaming</a>.
+      </p>
+      <p>Mostly, I am busy with college and maintaining passing grades.</p>
+    </section>
+  </div>
+
+  <footer style="text-align:center; padding:20px; background:#222; color:white">
+    <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
   </footer>
 
   <script>
-    const tabs = document.querySelectorAll('.tab-btn');
-    const contents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('text-cyan-400'));
-        contents.forEach(c => c.classList.add('hidden'));
-        tab.classList.add('text-cyan-400');
-        document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
-      });
-    });
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
   </script>
 </body>
 </html>
