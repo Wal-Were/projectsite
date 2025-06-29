@@ -54,6 +54,14 @@
     .tab-active {
       display: block;
     }
+    .inner-tab {
+      background-color: #1a1444;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .inner-tab:hover {
+      background-color: #2a2455;
+    }
   </style>
 </head>
 <body>
@@ -99,14 +107,7 @@
         <hr />
         <h3>Introduction</h3>
         <p>
-          <img
-            width="180"
-            height="210"
-            class="pull-left"
-            src="images/DSC02738.jpg"
-            alt="Profile"
-            style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;"
-          />
+          <img width="180" height="210" class="pull-left" src="images/DSC02738.jpg" alt="Profile" style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;" />
           Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#call">here</a>.<br /><br />
           Please take your time as you scroll through my home page. Let me list computer languages that I am proficient in:
         </p>
@@ -177,14 +178,7 @@
           <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
         </div>
         <div>
-          <img
-            width="250"
-            height="250"
-            class="pull-left"
-            src="images/Wal_Were New Logo.png"
-            alt="Logo"
-            style="border: 10px solid #051685;"
-          />
+          <img width="250" height="250" class="pull-left" src="images/Wal_Were New Logo.png" alt="Logo" style="border: 10px solid #051685;" />
         </div>
         <div class="four columns">
           <p>
@@ -211,7 +205,32 @@
     <div id="projects" class="tab-content">
       <div class="row section-head">
         <h1>Projects</h1>
-        <p>Coming soon... or poke me to update it faster.</p>
+        <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
+      </div>
+
+      <div class="row">
+        <div class="tab inner-tab" onclick="showProjectTab('school-projects')">School</div>
+        <div class="tab inner-tab" onclick="showProjectTab('personal-projects')">Personal</div>
+      </div>
+
+      <div id="school-projects" class="tab-content tab-active">
+        <h3>School Projects</h3>
+        <ul>
+          <li><b>Smart Door Lock System</b> — RFID & Arduino-based security with LCD interface.</li>
+          <li><b>Attendance App</b> — Java-based UI to simulate biometric time-in/out for classes.</li>
+          <li><b>OS Simulation</b> — Process scheduler and memory allocator built in C++.</li>
+          <li><b>Simple Web Portfolio</b> — HTML/CSS/JS project demonstrating front-end skills.</li>
+        </ul>
+      </div>
+
+      <div id="personal-projects" class="tab-content">
+        <h3>Personal Projects</h3>
+        <ul>
+          <li><b>The Walk</b> — A narrative-driven Unreal Engine game exploring souls, death, and regrets. Yes, it’s philosophical. No, it doesn’t have jumpscares. Yet.</li>
+          <li><b>Wattpad: "Mindwire"</b> — Sci-fi thriller about AI, morality, and rebellion. Link on Wattpad under "Walf_Albot".</li>
+          <li><b>Wal_Were YouTube Channel</b> — Gaming and dev logs. Somehow chaotic *and* informative.</li>
+          <li><b>Twitch Streaming</b> — Variety games and live commentary. See me lose, live.</li>
+        </ul>
       </div>
     </div>
 
@@ -236,6 +255,12 @@
     function showTab(id) {
       const tabs = document.querySelectorAll('.tab-content');
       tabs.forEach(t => t.classList.remove('tab-active'));
+      document.getElementById(id).classList.add('tab-active');
+    }
+
+    function showProjectTab(id) {
+      const innerTabs = document.querySelectorAll('#projects .tab-content');
+      innerTabs.forEach(t => t.classList.remove('tab-active'));
       document.getElementById(id).classList.add('tab-active');
     }
   </script>
