@@ -13,21 +13,104 @@
   <script src="js/modernizr.js"></script>
   <link rel="shortcut icon" href="favicon.png" />
   <style>
-    .school-project-list {
-  display: flex;
-  flex-direction: column;
+    .design-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: #111;
+}
+
+.design-gallery h2 {
+  grid-column: 1 / -1;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Base card style */
+.project-card {
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  transition: all 0.2s ease;
+}
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #8a2be2;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.project-card a:hover {
+  background-color: #a95fff;
+}
+
+/* Style A: Top folder tab */
+.style-a {
+  background-color: #1a1a1a;
+  border-top: 4px solid #8a2be2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Style B: Gradient glow */
+.style-b {
+  background: linear-gradient(to bottom, #222, #1a1a1a);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Style C: Side bar/tag */
+.style-c {
+  background-color: #1a1a1a;
+  position: relative;
+  padding-left: 30px;
+}
+.style-c::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  bottom: 15px;
+  width: 6px;
+  background-color: #8a2be2;
+  border-radius: 4px;
+}
+
+/* Style D: Paper texture */
+.style-d {
+  background-color: #1a1a1a;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.01) 0px,
+    rgba(255, 255, 255, 0.01) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.02), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+  .school-project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
 .project-card {
-  background-color: #1c1c1c;
+  background-color: #121212; /* Matte black/charcoal */
   border: 1px solid #333;
-  padding: 20px;
-  border-radius: 8px;
-  color: #e0e0e0;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  transition: transform 0.2s ease;
+  border-radius: 10px;
+  padding: 15px;
+  color: #ffffff; /* Plain white text */
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, border 0.2s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -37,28 +120,30 @@
 
 .project-card h4 {
   margin-top: 0;
-  color: #ccc;
+  font-size: 18px;
+  color: #ffffff;
 }
 
 .project-card p {
   margin: 10px 0;
   font-size: 14px;
-  color: #aaa;
+  color: #dddddd;
 }
 
 .project-card a {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #444;
+  margin-top: auto;
+  align-self: start;
+  padding: 8px 16px;
+  background-color: #8a2be2; /* A rich but subtle purple */
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  font-size: 13px;
   transition: background-color 0.2s ease;
-  font-size: 14px;
 }
 
 .project-card a:hover {
-  background-color: #666;
+  background-color: #b266ff;
 }
 
 .projrow {
@@ -318,6 +403,35 @@
       <p>Basic face detection using OpenCV for machine vision class. Code and video demo included.</p>
       <a href="https://facedetectionpage.pages.dev/" target="_blank">Face Detection</a>
     </div>
+
+    <div class="design-gallery">
+  <h2>Project Card Design Showcase</h2>
+
+  <div class="project-card style-a">
+    <h4>Style A: Folder Tab</h4>
+    <p>Top colored border like a folder tab. Sleek, simple, safe.</p>
+    <a href="#">View Demo</a>
+  </div>
+
+  <div class="project-card style-b">
+    <h4>Style B: Gradient Glow</h4>
+    <p>Soft vertical gradient with subtle glow effect.</p>
+    <a href="#">View Demo</a>
+  </div>
+
+  <div class="project-card style-c">
+    <h4>Style C: Side Tag</h4>
+    <p>Left-edge accent bar like a labeled note or tag.</p>
+    <a href="#">View Demo</a>
+  </div>
+
+  <div class="project-card style-d">
+    <h4>Style D: Textured Paper</h4>
+    <p>Subtle diagonal grain texture on a dark background.</p>
+    <a href="#">View Demo</a>
+  </div>
+</div>
+
 
     <!-- Add more projects as needed -->
   </div>
