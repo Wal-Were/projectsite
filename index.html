@@ -48,8 +48,8 @@ aspect-ratio: 1 / 1;
 .project-card a {
   margin-top: auto;
   align-self: start;
-  padding: 12px 24px; /* Bigger button */
-  font-size: 16px;    /* Bigger text */
+  padding: 12px 24px; 
+  font-size: 16px;   
   background-color: #8a2be2;
   color: white;
   text-decoration: none;
@@ -96,9 +96,41 @@ aspect-ratio: 1 / 1;
 }
   .school-project-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+}
+
+.education-values-container {
+  display: flex;
+  flex-wrap: nowrap; /* no wrapping, force side-by-side */
+  justify-content: flex-start; /* align left */
+  align-items: flex-start; /* align top */
+  gap: 20px; /* space between the two sections */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.education-section {
+  flex: 1 1 65%;
+  background-color: #cbcbcc;
+  padding: 20px;
+  border-radius: 10px;
+  color: #2b2a2a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+  min-width: 0;
+}
+
+.values-section {
+  flex: 1 1 30%;
+  background-color: #707074;
+  padding: 13px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+  min-width: 0;
 }
 
 .projrow {
@@ -114,14 +146,6 @@ aspect-ratio: 1 / 1;
   background-color: #ffeeba;
   color: white;
 }
-
-    .colored-link {
-      background-color: #0a0524;
-      color: white;
-      padding: 14px 25px;
-      text-align: center;
-      font-size: 30px;
-    }
     .responsive-headline {
       font-size: clamp(32px, 8vw, 64px);
       font-weight: bold;
@@ -215,61 +239,61 @@ aspect-ratio: 1 / 1;
         <hr />
       </div>
 
-      <div class="colored-link">
-        Want to go to <a href="https://spleste.pages.dev/" style="color: aqua;">"The Simple Website"</a>?<br /><br />
-        Want to see some of my <a href="https://conctlectst.pages.dev/" style="color: aqua;">"Works"</a>?
-      </div>
+      <div style="background: #02011c; padding: 25px;"> </div>
+</br>
+      <div class="row add-bottom education-values-container">
+  <div class="education-section">
+    <h3 class="add-bottom">Detailed Information</h3>
+    <h5>a) Education</h5>
+    <dl>
+      <dt><b>Schools</b></dt>
+      <ul class="disc">
+        <li>Philippine School Doha (2007 - 2020)</li>
+        <li>Indang National Senior High School (2020 - 2022)</li>
+        <li>University of Bohol (2022 - present)</li>
+      </ul>
 
-      <div class="row add-bottom">
-        <div class="eight columns add-bottom">
-          <h3 class="add-bottom">Detailed Information</h3>
-          <h5>a) Education</h5>
-          <dl>
-            <dt><b>Schools</b></dt>
-            <ul class="disc">
-              <li>Philippine School Doha (2007 - 2020)</li>
-              <li>Indang National Senior High School (2020 - 2022)</li>
-              <li>University of Bohol (2022 - present)</li>
-            </ul>
+      <dt><b>Achievements</b></dt>
+      <ul class="disc">
+        <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
+        <li>Graduated with honors (2021 - 2022)</li>
+        <li>Representative in Qatar Debate Team (2019 - 2020)</li>
+        <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
+        <li>Finalist in Highschool Debate (2018 - 2019)</li>
+        <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
+        <li>3rd place in UB Days 2023 Gladiator</li>
+      </ul>
+    </dl>
 
-            <dt><b>Achievement</b></dt>
-            <ul class="disc">
-              <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
-              <li>Graduated with honors (2021 - 2022)</li>
-              <li>Representative in Qatar Debate Team (2019 - 2020)</li>
-              <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
-              <li>Finalist in Highschool Debate (2018 - 2019)</li>
-              <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
-              <li>3rd place in UB Days 2023 Gladiator</li>
-            </ul>
-          </dl>
+    <h5>b) Skills</h5>
+    <ul class="disc">
+      <li>Proficient in Verbal and Written Communications</li>
+      <li>Team Management</li>
+      <li>Problem Solving</li>
+      <li>Decision-Making</li>
+      <li>Attention to Detail</li>
+      <li>Tech Savvy</li>
+      <li>Strong Work Ethic</li>
+    </ul>
+  </div>
 
-          <h5>b) Skills</h5>
-          <ul class="disc">
-            <li>Proficient in Verbal and Written Communications</li>
-            <li>Team Management</li>
-            <li>Problem Solving</li>
-            <li>Decision-Making</li>
-            <li>Attention to Detail</li>
-            <li>Tech Savvy</li>
-            <li>Strong Work Ethic</li>
-          </ul>
-        </div>
+  <div class="values-section">
+    <h1>Values:</h1>
+    <div class="value-item"><h2>Integrity</h2><p>Upholding strong moral principles</p></div>
+    <div class="value-item"><h2>Loyalty</h2><p>Commitment and trustworthiness</p></div>
+    <div class="value-item"><h2>Professionalism</h2><p>Maintaining standards of excellence</p></div>
+    <div class="value-item"><h2>Adaptability</h2><p>Being flexible and open to change</p></div>
+    <div class="value-item"><h2>Resourceful</h2><p>Making the most of available resources</p></div>
+  </div>
+</div>
 
-        <div class="four columns add-bottom values-section">
-          <h1>Values:</h1>
-          <div class="value-item"><h2>Integrity</h2><p>Upholding strong moral principles</p></div>
-          <div class="value-item"><h2>Loyalty</h2><p>Commitment and trustworthiness</p></div>
-          <div class="value-item"><h2>Professionalism</h2><p>Maintaining standards of excellence</p></div>
-          <div class="value-item"><h2>Adaptability</h2><p>Being flexible and open to change</p></div>
-          <div class="value-item"><h2>Resourceful</h2><p>Making the most of available resources</p></div>
-        </div>
-        <hr />
-      </div>
+</br>
+
+      <div style="background: #02011c; padding: 25px;"> </div>
 
       <div class="row add-bottom">
         <div class="four columns">
-          <p id="call">21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
+          <p id="call">2 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
           <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
         </div>
         <div>
@@ -310,35 +334,110 @@ aspect-ratio: 1 / 1;
 
       <div id="school-projects" class="tab-content tab-active">
   <h3 style="text-align: center;">School Projects</h3>
+      <p style="text-align:center; font-style:italic; font-size: 20px;">
+         🧪 X = Experiment • ✅ F = Final • 🗃️ A = Archive
+      </p>
   <div class="school-project-list">
     <div class="project-card serious">
-      <h4>Operation: Family</h4>
+      <h4>🧪 X01 | Family</h4>
       <p>A project on family values using basic HTML/CSS. Focused on structure and visual communication.</p>
-      <a href="https://act4fmly.pages.dev/" target="_blank">View Project</a>
+      <a href="https://act4fmly.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🧪 X02 | Indescribable Wallpaper </h4>
+      <p>Experimenting different methods of applying background.</p>
+      <a href="https://actfmlywrk.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🧪 X03 | Photo Ops </h4>
+      <p>Experimenting with navigation arrows, image layout and presentation, and captions.</p>
+      <a href="https://s1lm3.pages.dev/me3" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🧪 X04 | Friendship Application </h4>
+      <p>Experimenting with form input and Google sheet storage.</p>
+      <a href="https://fndlstreg.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🧪 X05 | I.L.Y. Vaccine </h4>
+      <p>Experimenting with JNativeHook and global input listening.</p>
+      <a href="https://github.com/Wal-Were/I.L.Y.Vaccine" target="_blank">Inspect</a>
     </div>
  
     <div class="project-card serious">
-      <h4>Photo Gallery Web</h4>
-      <p>HTML and CSS gallery simulating responsive image layout and captions.</p>
-      <a href="https://phtoa6col.pages.dev/" target="_blank">View Project</a>
+      <h4>✅ F01 | Youtube Shout out</h4>
+      <p>Presenting a YouTube video on website [Personal Channel used]</p>
+      <a href="https://myv1e0.pages.dev/" target="_blank">Inspect</a>
     </div>
 
     <div class="project-card serious">
-      <h4>Networking Final Project</h4>
+      <h4>✅ F02 | Points to Ponder</h4>
+      <p>Presenting a catalogue of original qoutes</p>
+      <a href="https://sloqteslf.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>✅ F03 | Romance Man</h4>
+      <p>Expanded X05. Adding more functions and polish</p>
+      <a href="https://github.com/Wal-Were/Romance-Man" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>✅ F04 | Networking Final Project</h4>
       <p>Simulated and deployed network topologies. Includes documentation and demo videos.</p>
-      <a href="https://rb.gy/7ud8w9" target="_blank">View Final Project</a>
+      <a href="https://rb.gy/7ud8w9" target="_blank">Inspect</a>
     </div>
 
     <div class="project-card serious">
-      <h4>HDL Traffic Light</h4>
+      <h4>✅ F05 | HDL Traffic Light</h4>
       <p>Digital circuit simulation of a traffic light using HDL. Includes playlist for activity walkthroughs.</p>
-      <a href="https://trafficlightpage.pages.dev/" target="_blank">Final Project</a>
+      <a href="https://trafficlightpage.pages.dev/" target="_blank">Inspect</a>
     </div>
 
     <div class="project-card serious">
-      <h4>Machine Vision</h4>
+      <h4>✅ F06 | Machine Vision</h4>
       <p>Basic face detection using OpenCV for machine vision class. Code and video demo included.</p>
-      <a href="https://facedetectionpage.pages.dev/" target="_blank">Face Detection</a>
+      <a href="https://facedetectionpage.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>✅ F07 | Sumo Bot</h4>
+      <p>Basic bot with automatic controls.</p>
+      <a href="https://sumobotpage.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>✅ F08 | Hockey Bot</h4>
+      <p>Basic bot with manual controls.</p>
+      <a href="https://hbpage-aii.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🗃️ A01 | Gallery </h4>
+      <p>Archived experiment: testing iframes to build a photo gallery.</p>
+      <a href="https://phtoa6col.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🗃️ A02 | Class Catalogue </h4>
+      <p>Archived experiment: curated A-Z index of student sites in static  format.</p>
+      <a href="https://rlatedstelnk.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🗃️ A03 | Site 0 </h4>
+      <p>Archived experiment: Former website that held my projects [Still Active].</p>
+      <a href="https://conctlectst.pages.dev/" target="_blank">Inspect</a>
+    </div>
+
+    <div class="project-card serious">
+      <h4>🗃️ A04 | The Simple Site </h4>
+      <p>Archived experiment: Minimalist website [Still Active].</p>
+      <a href="https://spleste.pages.dev/" target="_blank">Inspect</a>
     </div>
 
   </div>
