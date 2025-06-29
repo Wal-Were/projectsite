@@ -13,104 +13,19 @@
   <script src="js/modernizr.js"></script>
   <link rel="shortcut icon" href="favicon.png" />
   <style>
-    .design-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  background-color: #111;
-}
-
-.design-gallery h2 {
-  grid-column: 1 / -1;
-  color: white;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Base card style */
 .project-card {
+aspect-ratio: 1 / 1; 
+  min-height: auto;
   border-radius: 10px;
   padding: 20px;
   color: white;
-  transition: all 0.2s ease;
-}
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #8a2be2;
-  padding: 8px 12px;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-}
-.project-card a:hover {
-  background-color: #a95fff;
-}
-
-/* Style A: Top folder tab */
-.style-a {
-  background-color: #1a1a1a;
-  border-top: 4px solid #8a2be2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Style B: Gradient glow */
-.style-b {
-  background: linear-gradient(to bottom, #222, #1a1a1a);
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
-}
-
-/* Style C: Side bar/tag */
-.style-c {
-  background-color: #1a1a1a;
-  position: relative;
-  padding-left: 30px;
-}
-.style-c::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 15px;
-  bottom: 15px;
-  width: 6px;
-  background-color: #8a2be2;
-  border-radius: 4px;
-}
-
-/* Style D: Paper texture */
-.style-d {
-  background-color: #1a1a1a;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.01) 0px,
-    rgba(255, 255, 255, 0.01) 1px,
-    transparent 1px,
-    transparent 4px
-  );
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.02), 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-  .school-project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.project-card {
-  background-color: #121212; /* Matte black/charcoal */
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 15px;
-  color: #ffffff; /* Plain white text */
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
-  transition: transform 0.2s ease, border 0.2s ease;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  background-color: #121212;
+  border: 1px solid #333;
+  transition: transform 0.2s ease, border 0.2s ease;
 }
 
 .project-card:hover {
@@ -120,25 +35,25 @@
 
 .project-card h4 {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 24px;
   color: #ffffff;
 }
 
 .project-card p {
-  margin: 10px 0;
-  font-size: 14px;
+  font-size: 18px;
   color: #dddddd;
+  line-height: 1.6;
 }
 
 .project-card a {
   margin-top: auto;
   align-self: start;
-  padding: 8px 16px;
-  background-color: #8a2be2; /* A rich but subtle purple */
+  padding: 12px 24px; /* Bigger button */
+  font-size: 16px;    /* Bigger text */
+  background-color: #8a2be2;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 13px;
+  border-radius: 8px;
   transition: background-color 0.2s ease;
 }
 
@@ -146,29 +61,58 @@
   background-color: #b266ff;
 }
 
+.project-card.serious {
+  background-color: #161616;
+  border-left: 12px solid #888; 
+  border-top: none; 
+  box-shadow: inset 0 0 10px #222;
+  padding-left: 25px; 
+}
+
+.project-card.serious p {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.project-card.sarcastic {
+  background-color: #222;
+  border: 2px dashed #ff9900;
+  color: #ffe;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
+}
+
+.project-card.sarcastic:hover {
+  background-color: #2b2b2b;
+  border-color: #ffc266;
+  transform: scale(1.02);
+}
+
+.project-card.sarcastic h4 {
+  color: #ffc266;
+}
+
+.project-card.sarcastic p {
+  font-family: 'Courier New', monospace;
+}
+  .school-project-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
 .projrow {
   text-align: center;
 }
-.school-tab {
-  background-color: #2b2b2b;
-  color: #ccc;
-  font-size: 18px;
-  border: 1px solid #444;
-}
+
 .school-tab:hover {
   background-color: #3a3a3a;
   color: white;
 }
 
-.personal-tab {
-  background-color: #fdf6e3;
-  color: #444;
-  font-size: 18px;
-  border: 1px solid #ffd580;
-}
 .personal-tab:hover {
   background-color: #ffeeba;
-  color: #222;
+  color: white;
 }
 
     .colored-link {
@@ -212,14 +156,7 @@
     .tab-active {
       display: block;
     }
-    .inner-tab {
-      background-color: #1a1444;
-      margin-top: 10px;
-      font-size: 18px;
-    }
-    .inner-tab:hover {
-      background-color: #2a2455;
-    }
+
   </style>
 </head>
 <body>
@@ -366,87 +303,77 @@
         <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
       </div>
 
-       <div class="projrow" style="text-align: center;">
+       <div class="projrow">
         <div class="tab school-tab" onclick="showProjectTab('school-projects')">School</div>
-        <div class="tab personal-tab" onclick="showProjectTab('personal-projects')">Personal</div>
+        <div class="tab personal-tab" style="text-align: center" onclick="showProjectTab('personal-projects')">Personal</div>
       </div>
 
       <div id="school-projects" class="tab-content tab-active">
   <h3 style="text-align: center;">School Projects</h3>
   <div class="school-project-list">
-    <div class="project-card">
+    <div class="project-card serious">
       <h4>Operation: Family</h4>
       <p>A project on family values using basic HTML/CSS. Focused on structure and visual communication.</p>
       <a href="https://act4fmly.pages.dev/" target="_blank">View Project</a>
     </div>
-
-    <div class="project-card">
+ 
+    <div class="project-card serious">
       <h4>Photo Gallery Web</h4>
       <p>HTML and CSS gallery simulating responsive image layout and captions.</p>
       <a href="https://phtoa6col.pages.dev/" target="_blank">View Project</a>
     </div>
 
-    <div class="project-card">
+    <div class="project-card serious">
       <h4>Networking Final Project</h4>
       <p>Simulated and deployed network topologies. Includes documentation and demo videos.</p>
       <a href="https://rb.gy/7ud8w9" target="_blank">View Final Project</a>
     </div>
 
-    <div class="project-card">
+    <div class="project-card serious">
       <h4>HDL Traffic Light</h4>
       <p>Digital circuit simulation of a traffic light using HDL. Includes playlist for activity walkthroughs.</p>
       <a href="https://trafficlightpage.pages.dev/" target="_blank">Final Project</a>
     </div>
 
-    <div class="project-card">
+    <div class="project-card serious">
       <h4>Machine Vision</h4>
       <p>Basic face detection using OpenCV for machine vision class. Code and video demo included.</p>
       <a href="https://facedetectionpage.pages.dev/" target="_blank">Face Detection</a>
     </div>
 
-    <div class="design-gallery">
-  <h2>Project Card Design Showcase</h2>
-
-  <div class="project-card style-a">
-    <h4>Style A: Folder Tab</h4>
-    <p>Top colored border like a folder tab. Sleek, simple, safe.</p>
-    <a href="#">View Demo</a>
-  </div>
-
-  <div class="project-card style-b">
-    <h4>Style B: Gradient Glow</h4>
-    <p>Soft vertical gradient with subtle glow effect.</p>
-    <a href="#">View Demo</a>
-  </div>
-
-  <div class="project-card style-c">
-    <h4>Style C: Side Tag</h4>
-    <p>Left-edge accent bar like a labeled note or tag.</p>
-    <a href="#">View Demo</a>
-  </div>
-
-  <div class="project-card style-d">
-    <h4>Style D: Textured Paper</h4>
-    <p>Subtle diagonal grain texture on a dark background.</p>
-    <a href="#">View Demo</a>
-  </div>
-</div>
-
-
-    <!-- Add more projects as needed -->
   </div>
 </div>
 
 
       <div id="personal-projects" class="tab-content">
-        <h3>Personal Projects</h3>
-        <ul>
-          <li><b>The Walk</b> — A narrative-driven Unreal Engine game exploring souls, death, and regrets. Yes, it’s philosophical. No, it doesn’t have jumpscares. Yet.</li>
-          <li><b>Wattpad: "Mindwire"</b> — Sci-fi thriller about AI, morality, and rebellion. Link on Wattpad under "Walf_Albot".</li>
-          <li><b>Wal_Were YouTube Channel</b> — Gaming and dev logs. Somehow chaotic *and* informative.</li>
-          <li><b>Twitch Streaming</b> — Variety games and live commentary. See me lose, live.</li>
-        </ul>
-      </div>
+  <h3 style="text-align: center;">Personal Projects</h3>
+  <div class="school-project-list">
+    <div class="project-card sarcastic">
+      <h4>The Walk</h4>
+      <p>A narrative game about the afterlife. No jumpscares, just emotional damage.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="project-card sarcastic">
+      <h4>Mindwire (Wattpad)</h4>
+      <p>AI. Rebellion. Ethics. And plot twists. Of course, there’s a twist.</p>
+      <a href="https://www.wattpad.com/user/Walf_Albot" target="_blank">Check Wattpad</a>
+    </div>
+
+    <div class="project-card sarcastic">
+      <h4>YouTube Channel</h4>
+      <p>Gaming + dev logs = chaos. Watch me struggle in HD.</p>
+      <a href="https://www.youtube.com/@Wal_Were" target="_blank">Watch Me Lose</a>
+    </div>
+
+    <div class="project-card sarcastic">
+      <h4>Twitch Stream</h4>
+      <p>Live reactions. Bad plays. Occasional insight.</p>
+      <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" target="_blank">Watch Me Die (In-Game)</a>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <div id="contact" class="tab-content">
