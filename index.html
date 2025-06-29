@@ -63,7 +63,6 @@
       display: block;
     }
 
-    /* Center inner tabs */
     .inner-tabs-container {
       display: flex;
       justify-content: center;
@@ -98,7 +97,6 @@
       background-color: #fff6b2;
     }
 
-    /* Placeholder school project cards */
     .project-cards {
       display: flex;
       flex-direction: column;
@@ -167,88 +165,120 @@
 
   <section id="main-content" style="padding: 90px 0 72px; background: #fff;">
     <div id="about" class="tab-content tab-active">
-      <!-- (Your About section stays unchanged) -->
-      <p>About section content here...</p>
-    </div>
-
-    <div id="projects" class="tab-content">
       <div class="row section-head">
-        <h1>Projects</h1>
-        <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
+        <h1>Motto</h1>
+        <p class="lead add-bottom">"AI is a foreign language. I am the translator"</p>
       </div>
 
-      <!-- Inner tabs -->
-      <div class="inner-tabs-container">
-        <div class="inner-tab school-tab" onclick="showProjectTab('school-projects')">School</div>
-        <div class="inner-tab personal-tab" onclick="showProjectTab('personal-projects')">Personal</div>
+      <div class="row add-bottom">
+        <hr />
+        <h3>Introduction</h3>
+        <p>
+          <img
+            width="180"
+            height="210"
+            class="pull-left"
+            src="images/DSC02738.jpg"
+            alt="Profile"
+            style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;"
+          />
+          Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present, but for further inquiry, you may contact <a href="#call">here</a>.<br /><br />
+          Please take your time as you scroll through my home page. Let me list computer languages that I am proficient in:
+        </p>
+        <p id="right">
+          &gt; C<br />
+          &gt; C++<br />
+          &gt; Java
+        </p>
+        <p>Maybe not the most proficient, but a wise person never stops learning...</p>
+        <hr />
       </div>
 
-      <!-- School Projects Placeholder -->
-      <div id="school-projects" class="tab-content tab-active">
-        <div class="project-cards">
-          <div class="project-card">
-            <h4>Project 1: Operation: Family</h4>
-            <p>A multimedia collage built for communication and design class.</p>
-            <a href="https://act4fmly.pages.dev/" target="_blank">View Project</a>
-          </div>
-          <div class="project-card">
-            <h4>Project 2: I Love You Vaccine</h4>
-            <p>A game prototype exploring the themes of affection, choice, and survival.</p>
-            <a href="https://github.com/Wal-Were/I.L.Y.Vaccine" target="_blank">View on GitHub</a>
-          </div>
-          <div class="project-card">
-            <h4>Project 3: Photo Gallery</h4>
-            <p>A static site showcasing photography work through CSS and HTML layouting.</p>
-            <a href="https://phtoa6col.pages.dev/" target="_blank">View Project</a>
-          </div>
+      <div class="colored-link">
+        Want to go to <a href="https://spleste.pages.dev/" style="color: aqua;">"The Simple Website"</a>?<br /><br />
+        Want to see some of my <a href="https://conctlectst.pages.dev/" style="color: aqua;">"Works"</a>?
+      </div>
+
+      <div class="row add-bottom">
+        <div class="eight columns add-bottom">
+          <h3 class="add-bottom">Detailed Information</h3>
+          <h5>a) Education</h5>
+          <dl>
+            <dt><b>Schools</b></dt>
+            <ul class="disc">
+              <li>Philippine School Doha (2007 - 2020)</li>
+              <li>Indang National Senior High School (2020 - 2022)</li>
+              <li>University of Bohol (2022 - present)</li>
+            </ul>
+
+            <dt><b>Achievement</b></dt>
+            <ul class="disc">
+              <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
+              <li>Graduated with honors (2021 - 2022)</li>
+              <li>Representative in Qatar Debate Team (2019 - 2020)</li>
+              <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
+              <li>Finalist in Highschool Debate (2018 - 2019)</li>
+              <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
+              <li>3rd place in UB Days 2023 Gladiator</li>
+            </ul>
+          </dl>
+
+          <h5>b) Skills</h5>
+          <ul class="disc">
+            <li>Proficient in Verbal and Written Communications</li>
+            <li>Team Management</li>
+            <li>Problem Solving</li>
+            <li>Decision-Making</li>
+            <li>Attention to Detail</li>
+            <li>Tech Savvy</li>
+            <li>Strong Work Ethic</li>
+          </ul>
+        </div>
+
+        <div class="four columns add-bottom values-section">
+          <h1>Values:</h1>
+          <div class="value-item"><h2>Integrity</h2><p>Upholding strong moral principles</p></div>
+          <div class="value-item"><h2>Loyalty</h2><p>Commitment and trustworthiness</p></div>
+          <div class="value-item"><h2>Professionalism</h2><p>Maintaining standards of excellence</p></div>
+          <div class="value-item"><h2>Adaptability</h2><p>Being flexible and open to change</p></div>
+          <div class="value-item"><h2>Resourceful</h2><p>Making the most of available resources</p></div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="row add-bottom">
+        <div class="four columns">
+          <p id="call">21 years old, Roman Catholic, and a 3rd year student. Reliable intrusion, steady moral compass, and sturdy conviction.</p>
+          <p>To my friends, I am the most loyal and reliable. I may not have all the answers, but I will support them when needed.</p>
+        </div>
+        <div>
+          <img
+            width="250"
+            height="250"
+            class="pull-left"
+            src="images/Wal_Were New Logo.png"
+            alt="Logo"
+            style="border: 10px solid #051685;"
+          />
+        </div>
+        <div class="four columns">
+          <p>
+            As time passes, I have indulged in hobbies like <a href="https://www.wattpad.com/user/Walf_Albot">writing</a>, <a href="https://www.youtube.com/@Wal_Were">video making</a>, <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true">streaming</a>, and more.
+          </p>
+          <p>Mostly, I am busy with college and maintaining passing grades.</p>
         </div>
       </div>
 
-      <!-- Personal Projects Placeholder -->
-      <div id="personal-projects" class="tab-content">
-        <div class="project-cards">
-          <div class="project-card" style="background-color: #fff9e6; color: #222;">
-            <h4>The Walk</h4>
-            <p>A narrative-driven game about souls, regrets, and the light at the end. Built in Unreal Engine.</p>
-            <a href="#">Coming soon</a>
-          </div>
-          <div class="project-card" style="background-color: #ffe4ec; color: #222;">
-            <h4>Mindwire</h4>
-            <p>A Wattpad series exploring AI, morality, and rebellion in a tech dystopia.</p>
-            <a href="https://www.wattpad.com/user/Walf_Albot" target="_blank">Read on Wattpad</a>
-          </div>
+      <div class="row">
+        <div class="six columns">
+          <p>
+            "In my spare time, I dabble in game design and narrative development. Currently working on a narrative-driven game using Unreal Engine about those who have passed—exploring their regrets, joy, and sorrow. It’s not award-winning yet, but you have to start somewhere..."
+          </p>
+        </div>
+        <div class="six columns">
+          <p>
+            While still in college, this website serves as my portfolio for interested parties. If interested, let me know.
+          </p>
         </div>
       </div>
     </div>
-
-    <div id="contact" class="tab-content">
-      <div class="row section-head">
-        <h1>Contact</h1>
-        <p>Reach out to me on social media links above, or wait until I feel like checking emails again.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="row">
-      <div class="six columns info">
-        <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    function showTab(id) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('tab-active'));
-      document.getElementById(id).classList.add('tab-active');
-    }
-
-    function showProjectTab(id) {
-      const projectTabs = document.querySelectorAll('#projects .tab-content');
-      projectTabs.forEach(t => t.classList.remove('tab-active'));
-      document.getElementById(id).classList.add('tab-active');
-    }
-  </script>
-</body>
-</html>
