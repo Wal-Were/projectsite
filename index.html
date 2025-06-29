@@ -181,6 +181,36 @@ aspect-ratio: 1 / 1;
       display: block;
     }
 
+    .philosopher-style {
+      background-color: #1a1a1a;
+      border-left: 6px solid #6a5acd;
+      border-top: 1px solid #555;
+      padding: 30px;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 8px;
+      font-style: italic;
+      box-shadow: 0 0 10px rgba(106, 90, 205, 0.2);
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .philosopher-style h2 {
+      font-style: normal;
+      font-size: 28px;
+      color: #b4a7ff;
+      margin-bottom: 15px;
+    }
+
+    .philosopher-style a {
+      color: #a69cff;
+      text-decoration: none;
+    }
+
+    .philosopher-style a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -193,11 +223,6 @@ aspect-ratio: 1 / 1;
       <div class="tab" onclick="showTab('projects')">Projects</div>
       <div class="tab" onclick="showTab('contact')">Contact</div>
     </nav>
-    <ul class="header-social">
-      <li><a href="https://www.facebook.com/waynerold.llamado/"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="https://www.youtube.com/@Wal_Were"><i class="fab fa-youtube-square"></i></a></li>
-      <li><a href="https://www.twitch.tv/wal_were_gaming?no-reload=true"><i class="fab fa-twitch"></i></a></li>
-    </ul>
   </header>
 
   <section id="hero">
@@ -219,7 +244,7 @@ aspect-ratio: 1 / 1;
     <div id="about" class="tab-content tab-active">
       <div class="row section-head">
         <h1>Motto</h1>
-        <p class="lead add-bottom">"AI is a foreign language. I am the translator"</p>
+        <p class="lead add-bottom">"By logic, by purpose, by order"</p>
       </div>
 
       <div class="row add-bottom">
@@ -476,21 +501,45 @@ aspect-ratio: 1 / 1;
     </div>
 
     <div id="contact" class="tab-content">
-      <div class="row section-head">
-        <h1>Contact</h1>
-        <p>Reach out to me on social media links above, or wait until I feel like checking emails again.</p>
+  <div class="row section-head">
+    <h1>Contact</h1>
+  </div>
+  <div class="philosopher-style">
+
+        <h2>Send Me A Thought</h2>
+        <p>If you're here to talk, I assume the universe nudged you. Or maybe you typed wrong. Either way:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:wral.studio@gmail.com">wral.studio@gmail.com</a></li>
+          <li><strong>Discord:</strong>In Due Time</li>
+          <li><strong>Facebook:</strong>In Due Time</a></li>
+         <li><strong>Github:</strong>In Due Time</a></li>
+         <li><strong>Linkedin:</strong>In Due Time</a></li>
+         <li><strong>Itch.io:</strong>In Due Time</a></li>
+        
+        </ul>
+        <p>Respond time varies due to timezones and other factors, both internally and externally. Rest assured, a respond will be given</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="row">
-      <div class="six columns info">
-        <p>Format and theme obtained from free templates, redesigned to add individuality.</p>
-      </div>
-      <div class="six columns right-cols"></div>
+  <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: stretch; padding: 30px 40px; gap: 30px; font-size: 18px; line-height: 1.8;">
+    
+    <div style="flex: 1 1 300px; max-width: 33%;">
+      <p><strong>Template:</strong> <a href="https://styleshout.com/free-templates/" style="color: #8a2be2;">Styleshout</a>, modified to match the developer’s taste, interest, and sarcasm.</p>
     </div>
-  </footer>
+
+    <div style="flex: 1 1 300px; max-width: 33%;">
+      <p><strong>Purpose:</strong> This site serves as a portfolio, resume, and glorified procrastination project. Expect imperfections and sarcasm.</p>
+    </div>
+
+    <div style="flex: 1 1 300px; max-width: 33%;">
+      <p><strong>Disclaimer:</strong> &copy; 2025 Wayne Rold Allen Llamado. Powered by caffeine, bad decisions, and CTRL+Z.</p>
+    </div>
+
+  </div>
+</footer>
+
 
   <script>
     function showTab(id) {
