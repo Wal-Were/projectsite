@@ -13,6 +13,54 @@
   <script src="js/modernizr.js"></script>
   <link rel="shortcut icon" href="favicon.png" />
   <style>
+    .school-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  border-color: #555;
+}
+
+.project-card h4 {
+  margin-top: 0;
+  color: #ccc;
+}
+
+.project-card p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}
+
+.project-card a:hover {
+  background-color: #666;
+}
+
 .projrow {
   text-align: center;
 }
@@ -233,20 +281,48 @@
         <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
       </div>
 
-       <div class="row" style="text-align: center;">
+       <div class="projrow" style="text-align: center;">
         <div class="tab school-tab" onclick="showProjectTab('school-projects')">School</div>
         <div class="tab personal-tab" onclick="showProjectTab('personal-projects')">Personal</div>
       </div>
 
       <div id="school-projects" class="tab-content tab-active">
-        <h3>School Projects</h3>
-        <ul>
-          <li><b>Smart Door Lock System</b> — RFID & Arduino-based security with LCD interface.</li>
-          <li><b>Attendance App</b> — Java-based UI to simulate biometric time-in/out for classes.</li>
-          <li><b>OS Simulation</b> — Process scheduler and memory allocator built in C++.</li>
-          <li><b>Simple Web Portfolio</b> — HTML/CSS/JS project demonstrating front-end skills.</li>
-        </ul>
-      </div>
+  <h3 style="text-align: center;">School Projects</h3>
+  <div class="school-project-list">
+    <div class="project-card">
+      <h4>Operation: Family</h4>
+      <p>A project on family values using basic HTML/CSS. Focused on structure and visual communication.</p>
+      <a href="https://act4fmly.pages.dev/" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h4>Photo Gallery Web</h4>
+      <p>HTML and CSS gallery simulating responsive image layout and captions.</p>
+      <a href="https://phtoa6col.pages.dev/" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h4>Networking Final Project</h4>
+      <p>Simulated and deployed network topologies. Includes documentation and demo videos.</p>
+      <a href="https://rb.gy/7ud8w9" target="_blank">View Final Project</a>
+    </div>
+
+    <div class="project-card">
+      <h4>HDL Traffic Light</h4>
+      <p>Digital circuit simulation of a traffic light using HDL. Includes playlist for activity walkthroughs.</p>
+      <a href="https://trafficlightpage.pages.dev/" target="_blank">Final Project</a>
+    </div>
+
+    <div class="project-card">
+      <h4>Machine Vision</h4>
+      <p>Basic face detection using OpenCV for machine vision class. Code and video demo included.</p>
+      <a href="https://facedetectionpage.pages.dev/" target="_blank">Face Detection</a>
+    </div>
+
+    <!-- Add more projects as needed -->
+  </div>
+</div>
+
 
       <div id="personal-projects" class="tab-content">
         <h3>Personal Projects</h3>
