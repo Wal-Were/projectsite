@@ -13,6 +13,31 @@
   <script src="js/modernizr.js"></script>
   <link rel="shortcut icon" href="favicon.png" />
   <style>
+.row {
+  text-align: center;
+}
+.school-tab {
+  background-color: #2b2b2b;
+  color: #ccc;
+  font-size: 18px;
+  border: 1px solid #444;
+}
+.school-tab:hover {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.personal-tab {
+  background-color: #fdf6e3;
+  color: #444;
+  font-size: 18px;
+  border: 1px solid #ffd580;
+}
+.personal-tab:hover {
+  background-color: #ffeeba;
+  color: #222;
+}
+
     .colored-link {
       background-color: #0a0524;
       color: white;
@@ -208,9 +233,9 @@
         <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
       </div>
 
-      <div class="row">
-        <div class="tab inner-tab" onclick="showProjectTab('school-projects')">School</div>
-        <div class="tab inner-tab" onclick="showProjectTab('personal-projects')">Personal</div>
+       <div class="row" style="text-align: center;">
+        <div class="tab school-tab" onclick="showProjectTab('school-projects')">School</div>
+        <div class="tab personal-tab" onclick="showProjectTab('personal-projects')">Personal</div>
       </div>
 
       <div id="school-projects" class="tab-content tab-active">
