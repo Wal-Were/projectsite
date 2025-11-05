@@ -111,21 +111,16 @@
 /* Education & values */
 .education-values-container {
   display: flex;
-  gap: 20px;       /* spacing between boxes */
-  flex-wrap: wrap;  /* allows stacking on smaller screens */
-  margin: 0 auto;
+  flex-wrap: wrap; /* allow wrapping */
+  gap: 20px;
   width: 100%;
 }
 
-.education-section {
-  flex: 0 0 65%;    /* desktop width */
-  min-width: 0;
+.education-section, .values-section {
+  flex: 1 1 0; /* grow and shrink independently */
+  min-width: 250px; /* optional to prevent being too narrow */
 }
 
-.values-section {
-  flex: 0 0 30%;    /* desktop width */
-  min-width: 0;
-}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -632,6 +627,7 @@
   </script>
 </body>
 </html>
+
 
 
 
