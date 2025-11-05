@@ -204,19 +204,20 @@
   text-decoration: underline;
 }
 
-.pull-left {
-  float: left;
-  position: relative;   /* allows z-index to take effect */
-  z-index: 10;          /* higher than text containers */
-  margin-right: 20px;   /* keep spacing from text */
-}
 
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
-  .education-values-container {
-    flex-direction: column;
-    gap: 15px;
+  .pull-left {
+    float: none !important; /* cancel the left float */
+    display: block;
+    margin: 0 auto 20px auto; /* center it with spacing below */
+    width: 180px; /* or whatever fits */
+    height: auto;
+    z-index: 1; /* ensure it’s above text if positioned */
+    position: relative;
   }
+}
+
   .education-section, .values-section {
     flex: 1 1 100%;
   }
@@ -635,6 +636,7 @@
   </script>
 </body>
 </html>
+
 
 
 
