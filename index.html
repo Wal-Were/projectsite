@@ -111,32 +111,28 @@
 /* Education & values */
 .education-values-container {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px;
+  gap: 20px;       /* spacing between boxes */
+  flex-wrap: wrap;  /* allows stacking on smaller screens */
   margin: 0 auto;
   width: 100%;
 }
+
 .education-section {
-  flex: 0 0 65%;
-  background-color: #cbcbcc;
-  padding: 20px;
-  border-radius: 10px;
-  color: #2b2a2a;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  align-self: flex-start;
+  flex: 0 0 65%;    /* desktop width */
   min-width: 0;
 }
+
 .values-section {
-  flex: 0 0 30%;
-  background-color: #707074;
-  padding: 13px;
-  border-radius: 10px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  align-self: flex-start;
+  flex: 0 0 30%;    /* desktop width */
   min-width: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .education-section,
+  .values-section {
+    flex: 1 1 100%;  /* full width on mobile */
+  }
 }
 
 /* Tabs */
@@ -636,5 +632,6 @@
   </script>
 </body>
 </html>
+
 
 
