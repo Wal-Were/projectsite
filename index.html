@@ -207,13 +207,10 @@
 
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
-  #nav-wrap {
-    position: relative; /* normal flow */
-    top: auto;
-    width: 100%;
+  .education-values-container {
+    flex-direction: column;
+    gap: 15px;
   }
-}
-
   .education-section, .values-section {
     flex: 1 1 100%;
   }
@@ -239,12 +236,13 @@
   }
 }
 
-@media (max-width: 500px) {
-  .school-project-list {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 10px;
+@media (max-width: 768px) {
+  #nav-wrap {
+    position: relative; 
+    top: auto;
+    width: 100%;
   }
+}
   .project-card {
     padding: 15px;
     font-size: 16px;
@@ -382,25 +380,23 @@
       <div style="background: #02011c; padding: 25px; margin-bottom: 5px;" > </div>
 
       <div class="row add-bottom">
-  <div class="four columns">
-    <div class="paragraph-card" style="background-color: #abaaaa;">
-      <p style="color: #000000">22 years old. Roman Catholic. Third-year college student. Driven by something internal—call it conviction, call it compulsion. Either way, it’s battle-tested.</p>
-      <p style="color: #000000">Loyal to a fault. There’s always someone more skilled—but my circle knows this: you won’t find anyone more committed.</p>
+        <div class="four columns">
+          <div class="paragraph-card" style="background-color: #abaaaa;">
+          <p style="color: #000000">22 years old. Roman Catholic. Third-year college student. Driven by something internal—call it conviction, call it compulsion. Either way, it’s battle-tested.</p>
+          <p style="color: #000000">Loyal to a fault. There’s always someone more skilled—but my circle knows this: you won’t find anyone more committed.</p>
+        </div>
+        </div>
+        <div>
+          <img width="250" height="250" class="pull-left" src="images/Wal_Were New Logo.png" alt="Logo" style="border: 10px solid #051685;" />
+        </div>
+        <div class="four columns">
+          <div class="paragraph-card" style="background-color: #a59e9e;">
+          <p>Outside of school, I have explored a variety of creative work:<a href="https://www.wattpad.com/user/Walf_Albot" style="color: #4e128a;">writing</a>, <a href="https://www.youtube.com/@Wal_Were" style="color: #4e128a;">video production</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" style="color: #4e128a;">streaming</a>. A mix of activities to sharpen my skillset—and to ward off boredom.
+          </p>
+          <p>Right now, the priority is graduating college—surviving late-night grinds and caffeine overloads.</p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="four columns" style="display: flex; justify-content: center; align-items: center;">
-    <img width="250" height="250" src="images/Wal_Were New Logo.png" alt="Logo" style="border: 10px solid #051685; border-radius: 10px;" />
-  </div>
-
-  <div class="four columns">
-    <div class="paragraph-card" style="background-color: #a59e9e;">
-      <p>Outside of school, I have explored a variety of creative work: <a href="https://www.wattpad.com/user/Walf_Albot" style="color: #4e128a;">writing</a>, <a href="https://www.youtube.com/@Wal_Were" style="color: #4e128a;">video production</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" style="color: #4e128a;">streaming</a>. A mix of activities to sharpen my skillset—and to ward off boredom.</p>
-      <p>Right now, the priority is graduating college—surviving late-night grinds and caffeine overloads.</p>
-    </div>
-  </div>
-</div>
-
 
       <div class="row">
         <div class="six columns">
@@ -635,4 +631,11 @@
 </body>
 </html>
 
+2 things to fix
 
+lets start simple
+
+1. the tabs at the top
+
+I notice on the mobile version, they stay on screen, but I dont want that
+I want them on top and disappear as we slid down
