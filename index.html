@@ -139,13 +139,6 @@
 }
 
 /* Tabs */
-#nav-wrap {
-  position: relative;  /* normal flow */
-  background-color: #0a0524;
-  padding: 10px 0;
-  width: 100%;
-}
-
 .tab {
   display: inline-block;
   background-color: #0a0524;
@@ -211,12 +204,11 @@
   text-decoration: underline;
 }
 
-/* Pull-left / logo fixes */
 .pull-left {
   float: left;
-  position: relative;
-  z-index: 10;
-  margin-right: 20px;
+  position: relative;   /* allows z-index to take effect */
+  z-index: 10;          /* higher than text containers */
+  margin-right: 20px;   /* keep spacing from text */
 }
 
 /* === MOBILE MEDIA QUERIES === */
@@ -247,12 +239,6 @@
     font-size: 18px;
     padding: 8px 15px;
     margin: 5px 0;
-  }
-  /* Logo on mobile above text */
-  .pull-left {
-    float: none;
-    display: block;
-    margin: 0 auto 15px auto;
   }
 }
 
@@ -286,7 +272,6 @@
   }
 }
 </style>
-
 
 </head>
 <body>
@@ -650,6 +635,7 @@
   </script>
 </body>
 </html>
+
 
 
 
