@@ -13,7 +13,7 @@
   <script src="js/modernizr.js"></script>
   <link rel="shortcut icon" href="favicon.png" />
 
-  <style>
+<style>
 /* === Project Cards === */
 .project-card {
   aspect-ratio: 1 / 1;
@@ -111,22 +111,75 @@
 /* Education & values */
 .education-values-container {
   display: flex;
-  flex-wrap: wrap; /* allow wrapping */
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
 }
 
-.education-section, .values-section {
-  flex: 1 1 0; /* grow and shrink independently */
-  min-width: 250px; /* optional to prevent being too narrow */
+.education-section,
+.values-section {
+  flex: 1 1 0; /* grow/shrink independently */
+  min-width: 250px;
 }
-
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .education-section,
   .values-section {
     flex: 1 1 100%;  /* full width on mobile */
+  }
+  .row.add-bottom {
+    flex-direction: column;
+  }
+  .four.columns,
+  .six.columns {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+  .hero-text,
+  .hero-image {
+    text-align: center;
+  }
+  .hero-image img {
+    max-width: 180px;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+  .tab {
+    font-size: 18px;
+    padding: 8px 15px;
+    margin: 5px 0;
+  }
+}
+
+/* Smaller mobile */
+@media (max-width: 500px) {
+  .school-project-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+  .project-card {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .project-card a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .sub-headline {
+    font-size: 20px;
+  }
+  .tagline {
+    font-size: 16px;
+  }
+  .paragraph-card {
+    font-size: 15px;
+  }
+  .tab {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
   }
 }
 
@@ -198,74 +251,21 @@
 
 .projrow {
   display: flex;
-  justify-content: center; /* centers the tabs horizontally */
-  gap: 20px; /* optional spacing between tabs */
-  margin-bottom: 20px; /* optional spacing below */
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-
-/* === MOBILE MEDIA QUERIES === */
+/* Mobile nav adjustments */
 @media (max-width: 768px) {
   #nav-wrap {
-    position: relative; /* normal flow */
+    position: relative;
     top: auto;
     width: 100%;
   }
-} 
-  .education-section, .values-section {
-    flex: 1 1 100%;
-  }
-  .row.add-bottom {
-    flex-direction: column;
-  }
-  .four.columns, .six.columns {
-    flex: 1 1 100%;
-    margin-bottom: 15px;
-  }
-  .hero-text, .hero-image {
-    text-align: center;
-  }
-  .hero-image img {
-    max-width: 180px;
-    margin: 20px auto 0 auto;
-    display: block;
-  }
-  .tab {
-    font-size: 18px;
-    padding: 8px 15px;
-    margin: 5px 0;
-  }
-}
-
-@media (max-width: 500px) { 
-  .school-project-list {
-    grid-template-columns: 1fr; gap: 15px; padding: 10px; 
-  }
-
-  .project-card {
-    padding: 15px;
-    font-size: 16px;
-  }
-  .project-card a {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  .sub-headline {
-    font-size: 20px;
-  }
-  .tagline {
-    font-size: 16px;
-  }
-  .paragraph-card {
-    font-size: 15px;
-  }
-  .tab {
-    display: block;
-    width: 100%;
-    margin: 5px 0;
-  }
 }
 </style>
+
 
 </head>
 <body>
@@ -627,6 +627,7 @@
   </script>
 </body>
 </html>
+
 
 
 
