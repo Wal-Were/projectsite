@@ -213,22 +213,6 @@
     width: 100%;
   }
 } 
-
-@media (max-width: 768px) {
-  .row.add-bottom {
-    flex-direction: column;
-    align-items: center;
-  }
-  .row.add-bottom > div {
-    flex: 1 1 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-  .row.add-bottom img {
-    margin-bottom: 20px;
-  }
-}
-    
   .education-section, .values-section {
     flex: 1 1 100%;
   }
@@ -395,63 +379,40 @@
 
       <div style="background: #02011c; padding: 25px; margin-bottom: 5px;" > </div>
 
-      <div class="row add-bottom" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
-  <!-- Left Text -->
-  <div class="four columns" style="flex: 1 1 33%;">
-    <div class="paragraph-card" style="background-color: #abaaaa;">
-      <p style="color: #000000">
-        22 years old. Roman Catholic. Third-year college student. Driven by something internal—call it conviction, call it compulsion. Either way, it’s battle-tested.
-      </p>
-      <p style="color: #000000">
-        Loyal to a fault. There’s always someone more skilled—but my circle knows this: you won’t find anyone more committed.
-      </p>
+      <div class="row add-bottom">
+        <div class="four columns">
+          <div class="paragraph-card" style="background-color: #abaaaa;">
+          <p style="color: #000000">22 years old. Roman Catholic. Third-year college student. Driven by something internal—call it conviction, call it compulsion. Either way, it’s battle-tested.</p>
+          <p style="color: #000000">Loyal to a fault. There’s always someone more skilled—but my circle knows this: you won’t find anyone more committed.</p>
+        </div>
+        </div>
+      
+        <div class="four columns">
+          <div class="paragraph-card" style="background-color: #a59e9e;">
+          <p>Outside of school, I have explored a variety of creative work:<a href="https://www.wattpad.com/user/Walf_Albot" style="color: #4e128a;">writing</a>, <a href="https://www.youtube.com/@Wal_Were" style="color: #4e128a;">video production</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" style="color: #4e128a;">streaming</a>. A mix of activities to sharpen my skillset—and to ward off boredom.
+          </p>
+          <p>Right now, the priority is graduating college—surviving late-night grinds and caffeine overloads.</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Center Image -->
-  <div style="flex: 1 1 33%; text-align: center;">
-    <img src="images/Wal_Were New Logo.png" alt="Logo" style="max-width: 250px; height: auto; border: 10px solid #051685; margin: 0 auto;" />
-  </div>
-
-  <!-- Right Text -->
-  <div class="four columns" style="flex: 1 1 33%;">
-    <div class="paragraph-card" style="background-color: #a59e9e;">
-      <p>
-        Outside of school, I have explored a variety of creative work:
-        <a href="https://www.wattpad.com/user/Walf_Albot" style="color: #4e128a;">writing</a>,
-        <a href="https://www.youtube.com/@Wal_Were" style="color: #4e128a;">video production</a>,
-        and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" style="color: #4e128a;">streaming</a>.
-        A mix of activities to sharpen my skillset—and to ward off boredom.
-      </p>
-      <p>
-        Right now, the priority is graduating college—surviving late-night grinds and caffeine overloads.
-      </p>
+      <div class="row">
+        <div class="six columns">
+          <div class="paragraph-card" style="background-color: #767676;">
+          <p>
+            In my spare time, I’ve been developing a narrative-driven game in Unreal Engine. It lets players explore and confront different human values—regret, joy, sorrow, guilt. An indie project.
+          </p>
+        </div>
+        </div>
+        <div class="six columns">
+          <div class="paragraph-card" style="background-color: #bbb2b2;">
+          <p style="color: #000000">
+            This site serves as a portfolio—for scout agents, collaborators, or curious stumblers. If something here resonates, don’t hesitate to reach out.
+          </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-</div>
-
-<div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-
-  <div class="six columns" style="flex: 1 1 50%;">
-    <div class="paragraph-card" style="background-color: #767676;">
-      <p>
-        In my spare time, I’ve been developing a narrative-driven game in Unreal Engine. It lets players explore and confront different human values—regret, joy, sorrow, guilt. An indie project.
-      </p>
-    </div>
-  </div>
-
-  <div class="six columns" style="flex: 1 1 50%;">
-    <div class="paragraph-card" style="background-color: #bbb2b2;">
-      <p style="color: #000000">
-        This site serves as a portfolio—for scout agents, collaborators, or curious stumblers. If something here resonates, don’t hesitate to reach out.
-      </p>
-    </div>
-  </div>
-
-</div>
-
-
 
     <div id="projects" class="tab-content">
       <div class="row section-head">
@@ -667,5 +628,3 @@
   </script>
 </body>
 </html>
-
-
