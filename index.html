@@ -1,302 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>W.R.A.L. : About Me</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/default.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/media-queries.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/prettyPhoto.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <script src="js/modernizr.js"></script>
-  <link rel="shortcut icon" href="favicon.png" />
-  <style>
-/* General responsive tweaks */
-img {
-  max-width: 100%;
-  height: auto;
-}
-.education-values-container,
-.row {
-  flex-wrap: wrap;
-}
-.education-section,
-.values-section,
-.four.columns,
-.six.columns {
-  flex: 1 1 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-.school-project-list {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 10px;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W.R.A.L. : About Me</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+<style>
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #fff; color: #000; line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
+a { color: #8a2be2; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-/* Tabs responsive */
-.tab {
-  display: inline-block;
-  background-color: #0a0524;
-  color: white;
-  padding: 10px 20px;
-  margin: 5px 0;
-  cursor: pointer;
-  font-size: 18px;
-  text-align: center;
-}
+/* Header & nav */
+header { background: #0a0524; color: #fff; padding: 15px 10px; text-align: center; }
+nav { margin-top: 10px; }
+nav .tab { display: inline-block; background: #1a1444; color: #fff; padding: 10px 15px; margin: 2px; cursor: pointer; font-size: 16px; border-radius: 6px; }
+nav .tab:hover { background: #2a1c6f; }
 
-/* Hero responsive */
-.hero-text {
-  text-align: center;
-}
-.hero-image {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+/* Hero */
+#hero { padding: 20px; text-align: center; }
+#hero h1 { font-size: clamp(24px, 6vw, 48px); }
+#hero p { font-size: clamp(14px, 3vw, 20px); margin: 5px 0; }
+
+/* Tabs content */
+.tab-content { display: none; padding: 20px; }
+.tab-active { display: block; }
 
 /* Paragraph cards */
-.paragraph-card {
-  padding: 15px;
-  font-size: 16px;
-}
+.paragraph-card { background: #ccc; padding: 15px; margin: 10px 0; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2); }
 
-/* Headlines */
-.responsive-headline {
-  font-size: clamp(24px, 10vw, 48px);
-}
-.sub-headline {
-  font-size: 20px;
-}
-.tagline {
-  font-size: 16px;
-}
+/* Project cards */
+.project-card { background-color: #121212; color: #fff; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease, border 0.2s ease; }
+.project-card:hover { transform: scale(1.02); border-color: #555; }
+.project-card h4 { margin: 0 0 10px 0; font-size: 20px; }
+.project-card p { font-size: 16px; margin-bottom: 10px; }
+.project-card a { background: #8a2be2; color: #fff; padding: 10px 15px; border-radius: 8px; text-align: center; text-decoration: none; transition: 0.2s; }
+.project-card a:hover { background: #b266ff; }
 
-/* Project cards scaling */
-.project-card {
-  padding: 15px;
-  border-radius: 10px;
-}
+/* Project types */
+.project-card.serious { background-color: #161616; border-left: 8px solid #888; box-shadow: inset 0 0 10px #222; padding-left: 20px; }
+.project-card.sarcastic { background-color: #222; border: 2px dashed #ff9900; font-family: 'Courier New', monospace; box-shadow: 0 0 10px rgba(255,153,0,0.3); }
+.project-card.sarcastic h4 { color: #ffc266; }
+.project-card.sarcastic:hover { background-color: #2b2b2b; border-color: #ffc266; transform: scale(1.02); }
 
-/* Mobile media queries */
-@media (max-width: 768px) {
-  .tab {
-    width: 100%;
-    margin: 10px 0;
-  }
+/* School projects grid */
+.school-project-list { display: grid; grid-template-columns: 1fr; gap: 15px; }
+
+/* Education & Values */
+.education-values-container { display: flex; flex-direction: column; gap: 20px; }
+.education-section, .values-section { padding: 15px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2); }
+.education-section { background: #cbcbcc; color: #2b2a2a; }
+.values-section { background: #707074; color: #fff; }
+
+/* Contact section */
+.philosopher-style { background-color: #1a1a1a; border-left: 6px solid #6a5acd; padding: 20px; border-radius: 8px; color: #ccc; font-style: italic; box-shadow: 0 0 10px rgba(106,90,205,0.2); line-height: 1.6; }
+.philosopher-style a { color: #a69cff; }
+
+/* Footer */
+footer { background: #0a0524; color: #fff; text-align: center; padding: 20px; font-size: 14px; }
+
+/* Responsive */
+@media(min-width: 768px){
+  .school-project-list { grid-template-columns: repeat(2, 1fr); }
+  .education-values-container { flex-direction: row; }
+  .education-section, .values-section { flex: 1; }
 }
-  </style>
+@media(min-width: 1024px){
+  .school-project-list { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo"></div>
-    <nav id="nav-wrap">
-      <div class="tab" onclick="showTab('about')">About</div>
-      <div class="tab" onclick="showTab('projects')">Projects</div>
-      <div class="tab" onclick="showTab('contact')">Contact</div>
-    </nav>
-  </header>
 
-  <section id="hero">
-    <div class="row">
-      <div class="twelve columns">
-        <div class="hero-text">
-          <h1 class="responsive-headline">Wayne Rold Allen N. Llamado</h1>
-          <p class="sub-headline">Computer Engineering Student • Game Developer • Writer</p>
-          <p class="tagline">Blending logic with creativity to build tech and tell stories.</p>
-        </div>
-        <div class="hero-image">
-          <img src="images/DSC02738.jpg" alt="Hero Image" style="max-width: 250px; height: auto; border-radius: 10px;" />
-        </div>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1>Wayne Rold Allen N. Llamado</h1>
+  <nav>
+    <div class="tab" onclick="showTab('about')">About</div>
+    <div class="tab" onclick="showTab('projects')">Projects</div>
+    <div class="tab" onclick="showTab('contact')">Contact</div>
+  </nav>
+</header>
 
-  <section id="main-content" style="padding: 90px 0 72px; background: #fff;">
-    <div id="about" class="tab-content tab-active">
-      <div class="row section-head">
-        <h1 style="font-size: 36px; font-family: 'Georgia', serif; font-weight: bold; color: #000000;">Motto</h1>
-        <p class="lead add-bottom" style="font-size: 28px; font-family: 'Georgia', serif; font-weight: bold;">
-            "By logic, by purpose, by order"
-        </p>
-      </div>
+<section id="hero">
+  <p>Computer Engineering Student • Game Developer • Writer</p>
+  <img src="images/DSC02738.jpg" alt="Hero Image">
+</section>
 
-      <div class="row add-bottom">
-        <hr />
-        <h3>Introduction</h3>
-        <p>
-          <img width="180" height="210" class="pull-left" src="images/tech.png" alt="Profile" style="border: 5px solid #000; margin: 1px 30px 10px 1px; padding: 1px;" />
-          <div class="paragraph-card" style="background-color: #302c2c;">
-            Good morning, afternoon, and evening. Welcome to my personalized website. All necessary information is present.<br /><br />
-            Please take your time as you scroll through my home page. Let me list computer languages that I am proficient in:
-          </div>
-        </p>
-        <p id="right">
-          <div class="paragraph-card" style="background-color: #a3a3a3;">
-            &gt; C<br />
-            &gt; C++<br />
-            &gt; Java
-          </div>
-        </p>
-        <br>
-        <p>Maybe not the most proficient, but a wise person never stops learning...</p>
-        <hr />
-      </div>
-
-      <div class="row add-bottom education-values-container">
-        <div class="education-section">
-          <h3 class="add-bottom">Detailed Information</h3>
-          <h5>a) Education</h5>
-          <dl>
-            <dt><b>Schools</b></dt>
-            <ul class="disc">
-              <li>Philippine School Doha (2007 - 2020)</li>
-              <li>Indang National Senior High School (2020 - 2022)</li>
-              <li>University of Bohol (2022 - present)</li>
-            </ul>
-
-            <dt><b>Achievements</b></dt>
-            <ul class="disc">
-              <li>Award of Excellence in Computer System Servicing (2019 - 2020)</li>
-              <li>Graduated with honors (2021 - 2022)</li>
-              <li>Representative in Qatar Debate Team (2019 - 2020)</li>
-              <li>Champion of Highschool Science Olympic (2018 - 2019)</li>
-              <li>Finalist in Highschool Debate (2018 - 2019)</li>
-              <li>Shortlisted in Qatar's Young Writer Program: Open Mic Night (2019 - 2020)</li>
-              <li>3rd place in UB Days 2023 Gladiator</li>
-            </ul>
-          </dl>
-
-          <h5>b) Skills</h5>
-          <ul class="disc">
-            <li>Proficient in Verbal and Written Communications</li>
-            <li>Team Management</li>
-            <li>Problem Solving</li>
-            <li>Decision-Making</li>
-            <li>Attention to Detail</li>
-            <li>Tech Savvy</li>
-            <li>Strong Work Ethic</li>
-          </ul>
-        </div>
-
-        <div class="values-section">
-          <h1>Values:</h1>
-          <div class="value-item"><h2>Integrity</h2><p>Upholding strong moral principles</p></div>
-          <div class="value-item"><h2>Loyalty</h2><p>Commitment and trustworthiness</p></div>
-          <div class="value-item"><h2>Professionalism</h2><p>Maintaining standards of excellence</p></div>
-          <div class="value-item"><h2>Adaptability</h2><p>Being flexible and open to change</p></div>
-          <div class="value-item"><h2>Resourceful</h2><p>Making the most of available resources</p></div>
-        </div>
-      </div>
-
-      <div class="row add-bottom">
-        <div class="four columns">
-          <div class="paragraph-card" style="background-color: #abaaaa;">
-            <p style="color: #000000">22 years old. Roman Catholic. Third-year college student. Driven by something internal—call it conviction, call it compulsion. Either way, it’s battle-tested.</p>
-            <p style="color: #000000">Loyal to a fault. There’s always someone more skilled—but my circle knows this: you won’t find anyone more committed.</p>
-          </div>
-        </div>
-        <div>
-          <img width="250" height="250" class="pull-left" src="images/Wal_Were New Logo.png" alt="Logo" style="border: 10px solid #051685;" />
-        </div>
-        <div class="four columns">
-          <div class="paragraph-card" style="background-color: #a59e9e;">
-            <p>Outside of school, I have explored a variety of creative work:<a href="https://www.wattpad.com/user/Walf_Albot" style="color: #4e128a;">writing</a>, <a href="https://www.youtube.com/@Wal_Were" style="color: #4e128a;">video production</a>, and <a href="https://www.twitch.tv/wal_were_gaming?no-reload=true" style="color: #4e128a;">streaming</a>. A mix of activities to sharpen my skillset—and to ward off boredom.</p>
-            <p>Right now, the priority is graduating college—surviving late-night grinds and caffeine overloads.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="six columns">
-          <div class="paragraph-card" style="background-color: #767676;">
-            <p>In my spare time, I’ve been developing a narrative-driven game in Unreal Engine. It lets players explore and confront different human values—regret, joy, sorrow, guilt. An indie project.</p>
-          </div>
-        </div>
-        <div class="six columns">
-          <div class="paragraph-card" style="background-color: #bbb2b2;">
-            <p style="color: #000000">This site serves as a portfolio—for scout agents, collaborators, or curious stumblers. If something here resonates, don’t hesitate to reach out.</p>
-          </div>
-        </div>
-      </div>
+<section id="main-content">
+  <!-- ABOUT -->
+  <div id="about" class="tab-content tab-active">
+    <h2>Motto</h2>
+    <p>"By logic, by purpose, by order"</p>
+    <div class="paragraph-card">
+      Welcome! This page shows my skills, projects, and values.
     </div>
 
-    <div id="projects" class="tab-content">
-      <div class="row section-head">
-        <h1>Projects</h1>
-        <p>A split between sleepless academic work and dangerously passionate personal projects.</p>
-      </div>
-
-      <div class="projrow">
-        <div class="tab school-tab" onclick="showProjectTab('school-projects')">School</div>
-        <div class="tab personal-tab" onclick="showProjectTab('personal-projects')">Personal</div>
-      </div>
-
-      <div id="school-projects" class="tab-content tab-active">
-        <h3 style="text-align: center;">School Projects</h3>
-        <p style="text-align:center; font-style:italic; font-size: 20px;">
-           🧪 X = Experiment • ✅ F = Final • 🗃️ A = Archive
-        </p>
-        <div class="school-project-list">
-          <!-- Repeat your project cards here -->
-        </div>
-      </div>
-
-      <div id="personal-projects" class="tab-content">
-        <h3 style="text-align: center;">Personal Projects</h3>
-        <div class="school-project-list">
-          <!-- Repeat personal project cards here -->
-        </div>
-      </div>
-    </div>
-
-    <div id="contact" class="tab-content">
-      <div class="row section-head">
-        <h1>Contact</h1>
-      </div>
-      <div class="philosopher-style">
-        <h2>Send Me A Thought</h2>
-        <p>If you're here to talk, I assume the universe nudged you. Or maybe you typed wrong. Either way:</p>
-        <p>Timezone: Located in GMT+8 (Philippines)</p>
+    <!-- Education & Values -->
+    <div class="education-values-container">
+      <div class="education-section">
+        <h3>Education</h3>
         <ul>
-          <li><strong>Email:</strong> <a href="mailto:wral.studio@gmail.com"> wral.studio@gmail.com</a></li>
-          <li><strong>Discord:</strong> <span style="color: #5865F2; font-weight: bold; font-family: 'Courier New', monospace;">@Studio_Were</span></li>
-          <li><strong>Github:</strong> <a href="https://github.com/Wal-Were"> Transport</a></li>
-          <li><strong>Linkedin:</strong>  <a href="https://www.linkedin.com/in/wayne-llamado-907848372/"> Transport</a></li>
-          <li><strong>Itch.io:</strong> <a href="https://studio-were.itch.io/"> Transport</a></li>
+          <li>Philippine School Doha (2007-2020)</li>
+          <li>Indang National Senior High School (2020-2022)</li>
+          <li>University of Bohol (2022-present)</li>
+        </ul>
+        <h3>Achievements</h3>
+        <ul>
+          <li>Award of Excellence in Computer System Servicing</li>
+          <li>Graduated with honors</li>
+          <li>Representative in Qatar Debate Team</li>
+          <li>Champion of Highschool Science Olympic</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: stretch; padding: 30px 40px; gap: 30px; font-size: 18px; line-height: 1.8;">
-      <div style="flex: 1 1 300px; max-width: 33%;">
-        <p><strong>Template:</strong> <a href="https://styleshout.com/free-templates/" style="color: #8a2be2;">Styleshout</a>, modified to match the developer’s taste, interest, and sarcasm.</p>
-      </div>
-      <div style="flex: 1 1 300px; max-width: 33%;">
-        <p><strong>Purpose:</strong> This site serves as a portfolio, resume, and glorified procrastination project. Expect imperfections and sarcasm.</p>
-      </div>
-      <div style="flex: 1 1 300px; max-width: 33%;">
-        <p><strong>Disclaimer:</strong> &copy; 2025 Wayne Rold Allen Llamado. Powered by caffeine, bad decisions, and CTRL+Z.</p>
+      <div class="values-section">
+        <h3>Values</h3>
+        <div>Integrity</div>
+        <div>Loyalty</div>
+        <div>Professionalism</div>
+        <div>Adaptability</div>
+        <div>Resourceful</div>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <script>
-    function showTab(id) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('tab-active'));
-      document.getElementById(id).classList.add('tab-active');
-    }
-    function showProjectTab(id) {
-      const innerTabs = document.querySelectorAll('#projects .tab-content');
-      innerTabs.forEach(t => t.classList.remove('tab-active'));
-      document.getElementById(id).classList.add('tab-active');
-    }
-  </script>
+  <!-- PROJECTS -->
+  <div id="projects" class="tab-content">
+    <h2>Projects</h2>
+    <div class="school-project-list">
+      <div class="project-card serious">
+        <h4>🧪 X01 | Family</h4>
+        <p>HTML/CSS project on family values.</p>
+        <a href="https://act4fmly.pages.dev/" target="_blank">Inspect</a>
+      </div>
+      <div class="project-card sarcastic">
+        <h4>🖱️ M01 | Prisoner #2318</h4>
+        <p>Debut text-based narrative game.</p>
+        <a href="https://studio-were.itch.io/prisoner-2318" target="_blank">Inspect</a>
+      </div>
+      <div class="project-card sarcastic">
+        <h4>🖱️ M02 | The Walk</h4>
+        <p>Narrative game about interacting with souls.</p>
+        <a href="https://studio-were.itch.io/the-walk" target="_blank">Inspect</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <div class="philosopher-style">
+      <p>Email: <a href="mailto:wral.studio@gmail.com">wral.studio@gmail.com</a></p>
+      <p>Discord: <span>@Studio_Were</span></p>
+      <p>GitHub: <a href="https://github.com/Wal-Were">Transport</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/wayne-llamado-907848372/">Transport</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Wayne Rold Allen Llamado. Powered by caffeine and CTRL+Z.
+</footer>
+
+<script>
+function showTab(id){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('tab-active'));
+  document.getElementById(id).classList.add('tab-active');
+}
+</script>
+
 </body>
 </html>
