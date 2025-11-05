@@ -139,6 +139,13 @@
 }
 
 /* Tabs */
+#nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #0a0524;
+  padding: 10px 0;
+}
 .tab {
   display: inline-block;
   background-color: #0a0524;
@@ -204,6 +211,14 @@
   text-decoration: underline;
 }
 
+/* Pull-left / logo fixes */
+.pull-left {
+  float: left;
+  position: relative;
+  z-index: 10;
+  margin-right: 20px;
+}
+
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
   .education-values-container {
@@ -232,6 +247,12 @@
     font-size: 18px;
     padding: 8px 15px;
     margin: 5px 0;
+  }
+  /* Logo on mobile above text */
+  .pull-left {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
   }
 }
 
@@ -265,6 +286,7 @@
   }
 }
 </style>
+
 
 </head>
 <body>
@@ -628,4 +650,5 @@
   </script>
 </body>
 </html>
+
 
