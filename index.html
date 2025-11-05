@@ -207,10 +207,13 @@
 
 /* === MOBILE MEDIA QUERIES === */
 @media (max-width: 768px) {
-  .education-values-container {
-    flex-direction: column;
-    gap: 15px;
+  #nav-wrap {
+    position: relative; /* normal flow */
+    top: auto;
+    width: 100%;
   }
+}
+
   .education-section, .values-section {
     flex: 1 1 100%;
   }
@@ -629,3 +632,4 @@
   </script>
 </body>
 </html>
+
